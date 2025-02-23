@@ -2,17 +2,31 @@
 import Image from "next/image";
 import { FaGoogle } from "react-icons/fa";
 import Link from "next/link";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../../firebase/firebaseConfig";
+import { useRouter } from "next/navigation";
 
 
 export default function SignUp (){
+    const router = useRouter();
+
     const signUpWithGoogle = async () => {
-        try {
-            console.log("testing")
-            //sign in goes here
-        } catch(err) {
-            console.log("Error signing in: ", err);
+    try {
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+        if (user) {
+            localStorage.setItem('user', JSON.stringify({
+                email: user.email,
+                name: user.displayName,
+                avatar: user.photoURL
+            }));
+            router.push('/');
         }
-    };
+    } catch(err) {
+        console.log("Error signing up: ", err);
+        alert("An error occurred while signing up. Please try again.");
+    }
+};
 
     return (
         <>
