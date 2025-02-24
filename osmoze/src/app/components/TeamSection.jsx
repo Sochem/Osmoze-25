@@ -7,9 +7,9 @@ const TeamSection = ({ title, members }) => {
     const imageSize = isLargeGroup ? "lg:w-52 lg:h-52 md:w-36 md:h-3" : "lg:w-64 lg:h-60 md:w-52 md:h-48";
 
   return (
-    <div className= "bg-[#1238A0]/45 rounded-3xl p-6 w-full max-w-7xl lg:h-[400px] md:h-[350px] my-12 py-10 mx-auto">
+    <div className= "bg-[#1238A0]/45 rounded-3xl p-6 w-full max-w-7xl lg:h-[400px] md:h-[350px] my-12 py-6 mx-auto">
       
-      <h2 className="text-white text-4xl font-risque mb-4">{title}</h2>
+      <h2 className="text-white text-4xl font-risque mb-4 text-center">{title}</h2>
       <div className="flex flex-wrap justify-center gap-6 ">
         {members.map((member, index) => (
           <div key={index} className="flex flex-col items-center ">
