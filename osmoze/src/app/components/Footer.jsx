@@ -8,7 +8,7 @@ const Footer = () => {
         
         {/* Left Section - Logo & Event Details */}
         <div className="flex items-center space-x-4 lg:items-start">
-          <Image src="/assets/OsmozeLogo.png" alt="Osmoze Logo" width={90} height={90} />
+          <Image src="/images/OsmozeLogo.png" alt="Osmoze Logo" width={90} height={90} />
           <div>
             <h1 className="text-3xl font-bold">Osmoze’25</h1>
             <p className="text-lg mt-1">The Annual <br /> Chemical Extravaganza</p>
