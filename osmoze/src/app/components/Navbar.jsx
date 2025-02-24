@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* Left: Logo */}
       <div className="flex items-center">
         <div className="w-[200px] md:w-[260px] h-auto flex items-center">
-          <Image src="/osmoze/src/app/assets/b5d5f21c5320d8207e66caac935c0e36.png" alt="Osmoze Logo" width={260} height={160} />
+          <Image src="/osmoze/src/app/assets/OsmozeLogo.png" alt="Osmoze Logo" width={260} height={160} />
         </div>
       </div>
 
