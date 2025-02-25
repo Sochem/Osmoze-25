@@ -8,14 +8,24 @@ import { useRouter } from "next/navigation";
 import bg from "../../../public/images/SignUpBG.png"
 
 
-export default function SignUp (){
+export default function SignUp() {
     const router = useRouter();
 
     const signUpWithGoogle = async () => {
-    try {
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-        if (user) {
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+            if (!user || !user.email) {
+                throw new Error('No user data available');
+            }
+
+            const email = user.email.toLowerCase();
+            if (!email.endsWith('@itbhu.ac.in') && !email.endsWith('@iitbhu.ac.in')) {
+                await auth.signOut();
+                alert('Please use your institute email address to sign up');
+                return;
+            }
+
             localStorage.setItem('user', JSON.stringify({
                 email: user.email,
                 name: user.displayName,

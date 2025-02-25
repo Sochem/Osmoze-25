@@ -14,17 +14,26 @@ export default function Login() {
         try {
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
-            if (user) {
-                localStorage.setItem('user', JSON.stringify({
-                    email: user.email,
-                    name: user.displayName,
-                    avatar: user.photoURL
-                }));
-                router.push('/');
+            if (!user || !user.email) {
+                throw new Error('No user data available');
             }
+
+            const email = user.email.toLowerCase();
+            if (!email.endsWith('@itbhu.ac.in') && !email.endsWith('@iitbhu.ac.in')) {
+                await auth.signOut();
+                alert('Please use your institute email address to log in');
+                return;
+            }
+
+            localStorage.setItem('user', JSON.stringify({
+                email: user.email,
+                name: user.displayName,
+                avatar: user.photoURL
+            }));
+            router.push('/');
         } catch (err) {
-            console.log("Error logging in: ", err);
-            alert("An error occurred while logging in. Please try signing up if you haven't already.");
+            console.error("Error logging in: ", err);
+            alert(err.message || "An error occurred while logging in. Please try again.");
         }
     };
 
