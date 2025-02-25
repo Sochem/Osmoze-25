@@ -32,13 +32,11 @@ export default function SignUp() {
                 avatar: user.photoURL
             }));
             router.push('/');
-        }
-    } catch (err) {
-        console.log("Error signing up: ", err);
-        alert("An error occurred while signing up. Please try again.");
+        } catch (err) {
+            console.log("Error signing up: ", err);
+            alert("An error occurred while signing up. Please try again.");
+    } 
     }
-};
-
     return (
         <>
             <div className="w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
@@ -87,4 +85,6 @@ export default function SignUp() {
             </div>
         </>
     )
-}
+};
+
+    
