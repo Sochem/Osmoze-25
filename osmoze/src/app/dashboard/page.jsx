@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dark from "../../../public/images/LoginBG.png"
 import light from "../../../public/images/LightModeBG.png"
 import Image from "next/image";
@@ -10,6 +10,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { FaSun } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa";
+import toast, { Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 export default function dashboard() {
   const [lightTheme, setLightTheme] = useState(false)
@@ -42,6 +44,20 @@ export default function dashboard() {
   ]
 
 
+
+  const router = useRouter();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem('user');
+    if (!userData) {
+      router.push('/login');
+      return;
+    }
+    setUser(JSON.parse(userData));
+  }, []);
+
+  if (!user) return null;
 
   return (
     <>
@@ -77,6 +93,24 @@ export default function dashboard() {
 
         <div className="flex-1 p-4 overflow-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mt-4 mb-8">
+            <div className="text-4xl md:text-5xl font-bold text-white mb-6 md:ml-[50px]">
+              Dashboard
+            </div>
+            <div className="text-center">
+              <Image
+                src={user?.avatar || "/images/ProfilePic.png"}
+                alt="profile pic"
+                className="rounded-full mx-auto"
+                width={120}
+                height={120}
+              />
+              <span className="text-[#CC9292] text-lg md:text-2xl block font-bold mt-2">
+                {user?.name ? user.name.split(' ').slice(0, 2).join(' ') : "Guest"}
+              </span>
+            </div>
+          </div>
+        <div className="flex-1 p-4 overflow-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center mt-4 mb-8">
             <div className={`text-4xl md:text-5xl font-bold ${lightTheme? "text-[#071153]": "text-white"}
             mb-6 md:ml-[50px]`}>
               Dashboard
@@ -94,17 +128,17 @@ export default function dashboard() {
             </div>
           </div>
 
-        <div className="border border-white bg-[#180F40] text-white p-5 mt-8 mx-auto w-11/12 md:w-3/4 rounded-lg">
-          <div className="text-2xl md:text-3xl text-yellow-300 font-semibold mb-2">
-            Registered Events
+          <div className="border border-white bg-[#180F40] text-white p-5 mt-8 mx-auto w-11/12 md:w-3/4 rounded-lg">
+            <div className="text-2xl md:text-3xl text-yellow-300 font-semibold mb-2">
+              Registered Events
+            </div>
+            <div className={`border border-white ${lightTheme? "bg-[#3D6CBB] text-white" : "bg-[#4FA6DA]"}  text-black text-lg px-5 p-2 mt-2`}>
+              EVENTS
+            </div>
+            <div className="text-white mt-3 text-center">
+              Not Registered For Any Events
+            </div>
           </div>
-          <div className={`border border-white ${lightTheme? "bg-[#3D6CBB] text-white" : "bg-[#4FA6DA]"}  text-black text-lg px-5 p-2 mt-2`}>
-            EVENTS
-          </div>
-          <div className="text-white mt-3 text-center">
-            Not Registered For Any Events
-          </div>
-        </div>
 
         <div className="w-full max-w-4xl mx-auto my-10"> 
           <Slider {...settings} >
