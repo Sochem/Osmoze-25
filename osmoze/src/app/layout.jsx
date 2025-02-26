@@ -16,6 +16,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const risque = Risque({ subsets: ["latin"], weight: "400" });
+
 const modernAntiqua = Modern_Antiqua({
   weight: "400",
   subsets: ["latin"],
