@@ -26,6 +26,14 @@ const Navbar = () => {
     router.push('/');
   };
 
+  const handleProtectedRoute = (e, path) => {
+    if (path === '/dashboard' && !user) {
+      e.preventDefault();
+      toast.error('Please login to access dashboard');
+      router.push('/login');
+    }
+  };
+
   return (
     <>
     <Toaster position="top-center" reverseOrder={false} />
@@ -33,28 +41,34 @@ const Navbar = () => {
       {/* Left: Logo */}
       <div className="flex items-center">
         <div className="w-[200px] md:w-[260px] h-auto flex items-center">
+          <Link href="/">
           <Image
             src="/images/OsmozeLogo.png"
             alt="Osmoze Logo"
             width={100}
             height={100}
           />
+          </Link>
         </div>
       </div>
 
       {/* Center: Navigation Links (Desktop) */}
       <div className="hidden md:flex gap-8 text-[#F4F269] text-lg font-modernAntiqua justify-start ml-6">
-        {["About Us", "Team", "Events", "Announcements", "Dashboard"].map(
-          (item, index) => (
-            <Link
-              key={index}
-              href={`/${item.toLowerCase().replace(/ /g, "")}`}
-              className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-            >
-              {item}
-            </Link>
-          )
-        )}
+      {["About Us", "Team", "Events", "Announcements", "Dashboard"].map(
+  (item, index) => {
+    const path = `/${item.toLowerCase().replace(/ /g, "")}`;
+    return (
+      <Link
+        key={index}
+        href={path}
+        onClick={(e) => handleProtectedRoute(e, path)}
+        className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+      >
+        {item}
+      </Link>
+    );
+  }
+)}
       </div>
 
       {/* Right: Login Button and Mobile Menu Button */}
@@ -109,17 +123,23 @@ const Navbar = () => {
         } md:hidden`}
       >
         {["About Us", "Team", "Events", "Announcements", "Dashboard"].map(
-          (item, index) => (
-            <Link
-              key={index}
-              href={`/${item.toLowerCase().replace(/ /g, "")}`}
-              className="hover:text-[#DBD828] transition-colors duration-300"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item}
-            </Link>
-          )
-        )}
+  (item, index) => {
+    const path = `/${item.toLowerCase().replace(/ /g, "")}`;
+    return (
+      <Link
+        key={index}
+        href={path}
+        className="hover:text-[#DBD828] transition-colors duration-300"
+        onClick={(e) => {
+          setMenuOpen(false);
+          handleProtectedRoute(e, path);
+        }}
+      >
+        {item}
+      </Link>
+    );
+  }
+)}
         {user ? (
           <>
             <div className="flex items-center justify-center gap-2 py-2">
