@@ -1,13 +1,34 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogOut } from "lucide-react";
+import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+import { Toaster } from 'react-hot-toast';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setUser(null);
+    toast.success('Logged out successfully 👋');
+    router.push('/');
+  };
 
   return (
+    <>
+    <Toaster position="top-center" reverseOrder={false} />
     <nav className="w-full bg-gradient-to-r from-[#180F40] via-[#281287] to-[#180F40]  px-6 md:px-10 flex items-center shadow-lg relative z-50">
       {/* Left: Logo */}
       <div className="flex items-center">
@@ -37,14 +58,34 @@ const Navbar = () => {
       </div>
 
       {/* Right: Login Button and Mobile Menu Button */}
-      <div className="flex items-center ml-auto">
-        <div className="hidden md:flex">
-          <Link
-            href="/login"
-            className="px-6 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg transition-all duration-300 ease-out hover:shadow-[0_0_7px_5px_#E7F6FF]"
-          >
-            Log In
-          </Link>
+      <div className="flex items-center ml-auto gap-4">
+        <div className="hidden md:flex items-center gap-4">
+          {user ? (
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Image
+                  src={user.avatar || "/images/ProfilePic.png"}
+                  alt="Profile"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+              </div>
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-2 px-4 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg transition-all duration-300 hover:shadow-[0_0_7px_5px_#E7F6FF]"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              className="px-6 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg transition-all duration-300 hover:shadow-[0_0_7px_5px_#E7F6FF]"
+            >
+              Log In
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,14 +120,36 @@ const Navbar = () => {
             </Link>
           )
         )}
-        <Link
-          href="/login"
-          className="mt-2 px-6 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg transition-all duration-300 ease-out hover:shadow-[0_0_7px_5px_#E7F6FF]"
-        >
-          Log In
-        </Link>
+        {user ? (
+          <>
+            <div className="flex items-center justify-center gap-2 py-2">
+              <Image
+                src={user.avatar || "/images/ProfilePic.png"}
+                alt="Profile"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <span className="text-[#F4F269] text-sm">{user.name}</span>
+            </div>
+            <button
+              onClick={handleLogout}
+              className="flex items-center justify-center gap-2 mt-2 px-6 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg mx-auto"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <Link
+            href="/login"
+            className="mt-2 px-6 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg transition-all duration-300 hover:shadow-[0_0_7px_5px_#E7F6FF]"
+          >
+            Log In
+          </Link>
+        )}
       </div>
     </nav>
+    </>
   );
 };
 

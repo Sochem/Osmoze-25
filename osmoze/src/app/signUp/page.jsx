@@ -6,6 +6,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase/firebaseConfig";
 import { useRouter } from "next/navigation";
 import bg from "../../../public/images/SignUpBG.png"
+import toast, { Toaster } from 'react-hot-toast';
 
 
 export default function SignUp() {
@@ -22,7 +23,7 @@ export default function SignUp() {
             const email = user.email.toLowerCase();
             if (!email.endsWith('@itbhu.ac.in') && !email.endsWith('@iitbhu.ac.in')) {
                 await auth.signOut();
-                alert('Please use your institute email address to sign up');
+                toast.error('Please use your institute email address to sign up 🎓');
                 return;
             }
 
@@ -31,16 +32,22 @@ export default function SignUp() {
                 name: user.displayName,
                 avatar: user.photoURL
             }));
-            router.push('/');
+
+            toast.success('Signed up successfully! 🎉');
+            setTimeout(() => {
+                router.push('/');
+            }, 1000);
         } catch (err) {
-            console.log("Error signing up: ", err);
-            alert("An error occurred while signing up. Please try again.");
-    } 
-    }
+            console.error("Error signing up: ", err);
+            toast.error("An error occurred while signing up. Please try again. ❌");
+        }
+    };
+
     return (
         <>
+            <Toaster position="top-center" reverseOrder={false} />
             <div className="w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
-                style={{backgroundImage: `url(${bg.src})`}}>
+                style={{ backgroundImage: `url(${bg.src})` }}>
                 <div className="w-full h-full backdrop-blur-sm flex justify-center">
                     <main>
                         <div className="px-8 lg:px-8 h-[60rem] min-w-[25rem] ">
@@ -79,7 +86,7 @@ export default function SignUp() {
                                     </p>
                                 </div>
                             </div>
-                            </div>
+                        </div>
                     </main>
                 </div>
             </div>
@@ -87,4 +94,3 @@ export default function SignUp() {
     )
 };
 
-    

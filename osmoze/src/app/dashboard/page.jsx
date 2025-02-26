@@ -1,11 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import login from "../../../public/images/LoginBG.png"
 import Image from "next/image";
+import toast, { Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 export default function dashboard() {
+  const router = useRouter();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem('user');
+    if (!userData) {
+      toast.error('Please login to access dashboard 🔒');
+      router.push('/login');
+      return;
+    }
+    setUser(JSON.parse(userData));
+  }, []);
+
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="flex h-screen w-screen bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${login.src})` }}>
      
@@ -24,7 +40,6 @@ export default function dashboard() {
           <li className="hover:text-white cursor-pointer"><a href="/events">Event Registration</a></li>
           <li className="hover:text-white cursor-pointer"><a href="/login">Payment</a></li>
           <li className="hover:text-white cursor-pointer"><a href="/aboutUs">Contact Us</a></li>
-          <li className="hover:text-white cursor-pointer"><a href="/login">Profile</a></li>
         </ul>
         <Image
           src="/images/Legacy.png"
@@ -42,14 +57,14 @@ export default function dashboard() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/ProfilePic.png"
+              src={user?.avatar || "/images/ProfilePic.png"}
               alt="profile pic"
               className="rounded-full mx-auto"
               width={120}
               height={120}
             />
             <span className="text-[#CC9292] text-lg md:text-2xl block mt-2">
-              Name
+            {user?.name || "Guest"}
             </span>
           </div>
         </div>
