@@ -7,6 +7,10 @@ import { signOut } from "firebase/auth";
 import Link from "next/link";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import WelcomeSection from './components/Welcome';
+import ExploreSection from './components/Explore';
+import HeroSection from './components/Hero';
+
 export default function Home() {
     const router = useRouter();
     const [user, setUser] = useState(null);
@@ -29,8 +33,8 @@ export default function Home() {
     };
 
     return (
-      <div className="p-4">
-        <div className="flex items-center justify-between mb-4">
+      <div>
+        <div className="flex flex-col items-center justify-between">
           {user ? (
             <>
               <div className="flex items-center gap-4">
@@ -54,6 +58,11 @@ export default function Home() {
               >
                 Logout
               </button>
+              <HeroSection/>
+              <WelcomeSection/>
+              <ExploreSection/>
+
+
             </>
           ) : (
             <div className="flex gap-4">
@@ -61,6 +70,7 @@ export default function Home() {
                 Login
               </Link>
             </div>
+            
           )}
         </div>
       </div>

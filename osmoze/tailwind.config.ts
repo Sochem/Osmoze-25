@@ -13,6 +13,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        modern: ["'Modern Antiqua'", "cursive"], // Modern Antiqua font
+        merriweather: ["'Merriweather'", "serif"], // Merriweather font
+      },
     },
   },
   plugins: [],

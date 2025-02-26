@@ -16,6 +16,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const modernAntiqua = Modern_Antiqua({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-modern-antiqua",
+});
+
+const merriweather = Merriweather({
+  weight: ["300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+});
+
 export default function RootLayout({ children }) {
   const pathname = usePathname()
   const dashboard = pathname === "/dashboard";
@@ -23,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${modernAntiqua.variable} ${merriweather.variable} antialiased`}
       >
         {!dashboard && <Navbar />}
         {children}
