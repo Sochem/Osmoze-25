@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* Center: Navigation Links (Desktop) */}
-      <div className="hidden md:flex gap-8 text-[#F4F269] text-lg font-modernAntiqua justify-start ml-6">
+      <div className="hidden md:flex gap-12 text-[#F4F269] text-lg font-modernAntiqua justify-start ml-6">
       {["About Us", "Team", "Events", "Announcements", "Dashboard"].map(
   (item, index) => {
     const path = `/${item.toLowerCase().replace(/ /g, "")}`;
