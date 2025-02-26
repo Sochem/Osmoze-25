@@ -1,5 +1,5 @@
 "use client";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Modern_Antiqua, Merriweather } from "next/font/google";
 import { Risque } from "next/font/google";
 import { usePathname } from "next/navigation";
 import "../styles/globals.css";
@@ -18,6 +18,18 @@ const geistMono = Geist_Mono({
 
 const risque = Risque({ subsets: ["latin"], weight: "400" });
 
+const modernAntiqua = Modern_Antiqua({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-modern-antiqua",
+});
+
+const merriweather = Merriweather({
+  weight: ["300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+});
+
 export default function RootLayout({ children }) {
   const pathname = usePathname()
   const dashboard = pathname === "/dashboard";
@@ -25,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${risque.className} antialiased  vsc-initialized`}
+        className={`${geistSans.variable} ${geistMono.variable} ${modernAntiqua.variable} ${merriweather.variable} antialiased`}
       >
         {!dashboard && <Navbar />}
         {children}

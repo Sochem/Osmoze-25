@@ -15,6 +15,8 @@ export default {
       },
       fontFamily: {
         risque: ["var(--font-risque)", "cursive"],
+        modern: ["'Modern Antiqua'", "cursive"], // Modern Antiqua font
+        merriweather: ["'Merriweather'", "serif"], // Merriweather font
       },
     },
   },
