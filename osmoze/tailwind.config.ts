@@ -1,3 +1,4 @@
+import { Risque } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -11,10 +12,6 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        modern: ["'Modern Antiqua'", "cursive"], // Modern Antiqua font
-        merriweather: ["'Merriweather'", "serif"], // Merriweather font
       },
     },
   },
