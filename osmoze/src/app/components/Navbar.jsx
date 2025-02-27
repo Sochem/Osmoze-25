@@ -12,17 +12,31 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const router = useRouter();
 
-  useEffect(() => {
+  const checkUserStatus = () => {
     const userData = localStorage.getItem('user');
     if (userData) {
       setUser(JSON.parse(userData));
+    } else {
+      setUser(null);
     }
+  };
+
+  useEffect(() => {
+    checkUserStatus();
+    window.addEventListener('storage', checkUserStatus);
+    window.addEventListener('userStateChange', checkUserStatus);
+
+    return () => {
+      window.removeEventListener('storage', checkUserStatus);
+      window.removeEventListener('userStateChange', checkUserStatus);
+    };
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
     setUser(null);
     toast.success('Logged out successfully 👋');
+    window.dispatchEvent(new Event('userStateChange'));
     router.push('/');
   };
 

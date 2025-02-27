@@ -33,6 +33,7 @@ export default function Login() {
             }));
 
             toast.success('Logged in successfully... 🎉');
+            window.dispatchEvent(new Event('userStateChange'));
             setTimeout(() => {
                 router.push('/');
             }, 1000);
