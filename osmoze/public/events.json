@@ -1,0 +1,89 @@
+[
+    {
+      "title": "Osmocross",
+      "description": "A thrilling competition featuring logic and crosswords, challenging participants to solve word puzzles under time constraints.",
+      "prize": "$500",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Pratham Aggarwal", "contact": "xxxxxxxxxx" },
+        { "name": "Arpna", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Code Combat",
+      "description": "A fast-paced coding competition where developers battle against time to solve algorithmic challenges.",
+      "prize": "$750",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Rahul Verma", "contact": "xxxxxxxxxx" },
+        { "name": "Neha Sharma", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Design Sprint",
+      "description": "A UI/UX hackathon where designers create intuitive and visually appealing app interfaces within a short period.",
+      "prize": "$600",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Sanya Mehta", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Tech Quiz Show",
+      "description": "A mind-bending quiz covering various topics from programming languages to emerging tech trends.",
+      "prize": "$300",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Amit Patel", "contact": "xxxxxxxxxx" },
+        { "name": "Riya Gupta", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "AI Challenge",
+      "description": "A competition where teams develop innovative AI solutions to solve real-world problems.",
+      "prize": "$1000",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Kunal Roy", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Cyber Security Hunt",
+      "description": "An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses. ",
+      "prize": "$800",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Aditya Kumar", "contact": "xxxxxxxxxx" },
+        { "name": "Shweta Agarwal", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Robotics War",
+      "description": "A robotics battle event where teams build and program robots to compete in various tasks.",
+      "prize": "$1200",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Deepak Joshi", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Esports Championship",
+      "description": "A high-energy esports tournament featuring popular multiplayer games with cash prizes.",
+      "prize": "$1500",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Aniket Sen", "contact": "xxxxxxxxxx" },
+        { "name": "Kritika Bansal", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Startup Pitch Battle",
+      "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
+      "prize": "$2000",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
+      ]
+    }
+  ]
+  
