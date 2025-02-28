@@ -67,24 +67,23 @@ const Navbar = () => {
         </div>
 
         {/* Center: Navigation Links (Desktop) */}
-        <ul className="hidden md:flex gap-12 text-[#F4F269] text-lg font-modernAntiqua justify-start ml-6">
-          <li className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
-            <Link href="/aboutUs">About Us</Link>
-          </li>
-          <li className=" relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
-            <Link href="/team">Team</Link>
-          </li>
-          <li className=" relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
-            <Link href="/events">Events</Link>
-          </li>
-          <li className=" relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
-            <a href="https://www.instagram.com/sochem_iitbhu/">Announcement</a>
-          </li>
-
-          <li className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
-            <Link href="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
+        <div className="hidden md:flex gap-12 text-[#F4F269] text-lg font-modernAntiqua justify-start ml-6">
+          {["About Us", "Team", "Events", "Announcements", "Dashboard"].map(
+            (item, index) => {
+              const path = `/${item.toLowerCase().replace(/ /g, "")}`;
+              return (
+                <Link
+                  key={index}
+                  href={path}
+                  onClick={(e) => handleProtectedRoute(e, path)}
+                  className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                >
+                  {item}
+                </Link>
+              );
+            }
+          )}
+        </div>
 
         {/* Right: Login Button and Mobile Menu Button */}
         <div className="flex items-center ml-auto gap-4">
