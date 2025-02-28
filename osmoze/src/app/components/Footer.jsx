@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Follow Us Row */}
           <div className="flex flex-col lg:flex-row items-center lg:items-center space-y-2 lg:space-y-0 lg:space-x-12">
             <h2 className="text-2xl font-bold whitespace-nowrap">Follow Us</h2>
-            <div className="flex space-x-6">
+            <div className="flex space-x-10">
               <a href="https://www.facebook.com/Sochem.iitbhu/" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300">
                 <FaFacebookF className="text-blue-500 text-3xl" />
               </a>
