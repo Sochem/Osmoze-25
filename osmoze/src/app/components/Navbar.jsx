@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <>
     <Toaster position="top-center" reverseOrder={false} />
-    <nav className="w-full bg-gradient-to-r from-[#180F40] via-[#281287] to-[#180F40]  px-6 md:px-10 flex items-center shadow-lg relative z-50">
+    <nav className="w-full bg-gradient-to-r from-[#0c081d] via-[#1d0d64] to-[#0c081d]  px-6 md:px-10 flex items-center shadow-lg relative z-50">
       {/* Left: Logo */}
       <div className="flex items-center">
         <div className="w-[200px] md:w-[260px] h-auto flex items-center">
