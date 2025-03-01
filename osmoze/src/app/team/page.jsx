@@ -3,7 +3,7 @@ import TeamSection from "../components/TeamSection";
 
 function Team() {
   return (
-    <div className="bg-team">
+    <div className="bg-team w-full">
       <div className="w-full flex justify-center ">
         <img
           src="/svg/Meet our Teams.svg"
