@@ -2,7 +2,6 @@ import React from "react";
 
 const TeamSection = ({ title, members }) => {
 
-
     const isLargeGroup = members.length > 3;
     const imageSize = isLargeGroup ? "lg:w-52 lg:h-52 md:w-36 md:h-3" : "lg:w-64 lg:h-60 md:w-52 md:h-48";
 
