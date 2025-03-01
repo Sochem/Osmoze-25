@@ -3,7 +3,7 @@ import React from "react";
 const TeamSection = ({ title, members }) => {
 
     const isLargeGroup = members.length > 3;
-    const imageSize = isLargeGroup ? "lg:w-48 lg:h-48 md:w-32 md:h-32 " : "lg:w-64 lg:h-60 md:w-52 md:h-48";
+    const imageSize = isLargeGroup ? "lg:w-48 lg:h-48 md:w-32 md:h-32" : "lg:w-64 lg:h-60 md:w-52 md:h-48";
 
   return (
     <div className= "bg-[#1238A0]/45 rounded-3xl p-6 w-full max-w-7xl lg:h-[400px] md:h-[350px] my-12 py-6 mx-auto">
@@ -15,7 +15,7 @@ const TeamSection = ({ title, members }) => {
             <img
               src={member.image}
               alt={member.name}
-              className={` ${imageSize} lg:mx-4 sm:mx-2 bg-gray-300`}
+              className={` ${imageSize} mx-2 bg-gray-300`}
             />
             <p className="text-white font-risque text-lg mt-2 text-center">{member.designation?member.designation:""}</p>
             <p className="text-white font-risque text-lg  text-center">{member.name}</p>

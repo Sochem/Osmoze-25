@@ -16,15 +16,19 @@
 
 .bg-team {
     background-image: url('/images/image.png');
-    background-size: 100% auto;
+    background-size: 100% 100%;
+
+    background-position: center;
     background-attachment:fixed;
 }
+
 .aboutus {
   background-image: url('/images/bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
+
 .home {
   background-image: url('/images/land_bg.png');
   background-size: cover;
