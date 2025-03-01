@@ -25,6 +25,12 @@
   background-position: center;
   background-attachment: fixed;
 }
+.home {
+  background-image: url('/images/land_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 
 

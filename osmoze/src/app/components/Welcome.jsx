@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function WelcomeSection() {
     return (
         <div className="relative w-full h-screen flex flex-col sm:justify-around md:flex-row items-center text-white bg-cover bg-center px-6"
-            style={{ backgroundImage: "url('images/pngtree.png')" }}>
+            >
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
             {/* Left Section */}
