@@ -3,16 +3,11 @@ import Image from "next/image";
 
 function AboutUs() {
   return (
-    <div className="w-full min-h-screen relative">
+    <div className="aboutus">
       {/* Who We Are Section - Increased Height */}
       <div
         className="flex flex-col justify-center min-h-[110vh] w-full px-16 relative"
-        style={{
-          backgroundImage: "url('/images/aboutusbg1.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        
       >
         <h2 className="text-6xl text-center mb-10">ABOUT US</h2>
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
@@ -53,12 +48,7 @@ function AboutUs() {
       {/* Mission Section - Increased Height */}
       <div
         className="flex flex-col md:flex-row justify-between items-center min-h-[110vh] w-full px-16 relative z-0"
-        style={{
-          backgroundImage: "url('/images/aboutusbg2.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        
       >
         <div className="w-1/2 px-6">
           <h3 className="text-yellow-400 text-4xl mb-4">Our Mission</h3>
