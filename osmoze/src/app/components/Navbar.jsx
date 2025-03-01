@@ -86,15 +86,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           {user ? (
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Image
-                  src={user.avatar || "/images/ProfilePic.png"}
-                  alt="Profile"
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-              </div>
+              
               <button
                 onClick={handleLogout}
                 className="flex items-center gap-2 px-4 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg transition-all duration-300 hover:shadow-[0_0_7px_5px_#E7F6FF]"
@@ -146,16 +138,7 @@ const Navbar = () => {
         )}
         {user ? (
           <>
-            <div className="flex items-center justify-center gap-2 py-2">
-              <Image
-                src={user.avatar || "/images/ProfilePic.png"}
-                alt="Profile"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <span className="text-[#F4F269] text-sm">{user.name}</span>
-            </div>
+            
             <button
               onClick={handleLogout}
               className="flex items-center justify-center gap-2 mt-2 px-6 py-2 text-[#F4F269] bg-[#2844A2] rounded-lg font-modernAntiqua text-lg mx-auto"
