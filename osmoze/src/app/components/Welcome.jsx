@@ -13,7 +13,7 @@ export default function WelcomeSection() {
                 <h1 className="text-4xl md:text-5xl font-bold font-merriweather">Chemical Extravaganza</h1>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-purple-300">OSMOZE'24</h2>
                 <div className="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg text-lg">
-                    <Link href="/aboutUs">
+                    <Link href="/aboutus">
                         Explore
                     </Link>
                 </div>
