@@ -17,9 +17,7 @@
 .bg-team {
     background-image: url('/images/image.png');
     background-size: 100% auto;
-    background-repeat: repeat-y;
-    background-position: center 0px;
-    
+    background-attachment:fixed;
 }
 
 
