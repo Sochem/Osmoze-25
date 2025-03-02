@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function WelcomeSection() {
     return (
         <div className="relative w-full h-screen flex flex-col sm:justify-around md:flex-row items-center text-white bg-cover bg-center px-6"
-            style={{ backgroundImage: "url('images/pngtree.png')" }}>
+            >
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
             {/* Left Section */}
@@ -13,7 +13,7 @@ export default function WelcomeSection() {
                 <h1 className="text-4xl md:text-5xl font-bold font-merriweather">Chemical Extravaganza</h1>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-purple-300">OSMOZE'24</h2>
                 <div className="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg text-lg">
-                    <Link href="/explore">
+                    <Link href="/aboutus">
                         Explore
                     </Link>
                 </div>

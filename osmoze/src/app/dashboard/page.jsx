@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import dark from "../../../public/images/LoginBG.png"
-import light from "../../../public/images/LightModeBG.png"
+import dark from "../../../public/images/LoginBG.png";
+import light from "../../../public/images/LightModeBG.png";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick"
@@ -11,8 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { FaSun } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa";
-import toast, { Toaster } from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
+import toast, { Toaster } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function dashboard() {
   const [lightTheme, setLightTheme] = useState(false)
@@ -20,19 +20,19 @@ export default function dashboard() {
   const [setOpen, setisOpen] = useState(false)
 
   const changeTheme = () => {
-    setLightTheme(!lightTheme)
-  }
+    setLightTheme(!lightTheme);
+  };
 
   const changeBG = () => {
-    setBgImage(bgImage === dark.src ? light.src : dark.src)
-  }
+    setBgImage(bgImage === dark.src ? light.src : dark.src);
+  };
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
   };
 
   const events = [
@@ -49,9 +49,9 @@ export default function dashboard() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const userData = localStorage.getItem('user');
+    const userData = localStorage.getItem("user");
     if (!userData) {
-      router.push('/login');
+      router.push("/login");
       return;
     }
     setUser(JSON.parse(userData));
@@ -70,26 +70,36 @@ export default function dashboard() {
             <Image
               src="/images/OsmozeLogoLogin.png"
               alt="Logo"
-              href="/"
               width={120}
               height={120}
-              className="object-contain mx-auto" />
+              className="object-contain mx-auto"
+            />
           </Link>
-         
           <ul className="space-y-4 text-center text-lg md:text-xl">
-            <li className="hover:text-white cursor-pointer"><a href="/events">Instructions</a></li>
-            <li  className="hover:text-white cursor-pointer"><a href="/dashboard">Dashboard</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="/events">Event Registration</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="/login">Payment</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="/aboutUs">Contact Us</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="/login">Profile</a></li>
+            <li className="hover:text-white cursor-pointer">
+              <a href="/">Home</a>
+            </li>
+
+            <li className="hover:text-white cursor-pointer">
+              <a href="/events">Event Registration</a>
+            </li>
+            <li className="hover:text-white cursor-pointer">
+              <a href="https://www.instagram.com/sochem_iitbhu/">
+                Announcements
+              </a>
+            </li>
+
+            <li className="hover:text-white cursor-pointer">
+              <a href="/aboutUs">Contact Us</a>
+            </li>
           </ul>
           <Image
             src="/images/Legacy.png"
             alt="Logo"
             width={120}
             height={120}
-            className="object-contain mx-auto" />
+            className="object-contain mx-auto"
+          />
         </div>
 
         <div className="lg:hidden relative z-[999] top-0 left-0 ml-auto gap-4">

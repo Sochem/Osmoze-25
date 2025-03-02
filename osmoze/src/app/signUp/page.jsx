@@ -34,6 +34,7 @@ export default function SignUp() {
             }));
 
             toast.success('Signed up successfully! 🎉');
+            window.dispatchEvent(new Event('userStateChange'));
             setTimeout(() => {
                 router.push('/');
             }, 1000);

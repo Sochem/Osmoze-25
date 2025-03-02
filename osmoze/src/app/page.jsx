@@ -34,9 +34,11 @@ export default function Home() {
 
   return (
     <>
+      <div className="home">
       <HeroSection />
       <WelcomeSection />
       <ExploreSection />
+      </div>
     </>
   );
 }
