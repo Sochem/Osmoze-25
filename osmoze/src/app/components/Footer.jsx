@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -7,12 +8,14 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center max-w-6xl space-y-6 lg:space-y-0">
         {/* Left Section - Logo & Event Details */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
-          <Image
-            src="/images/OsmozeLogo.png"
-            alt="Osmoze Logo"
-            width={90}
-            height={90}
-          />
+          <Link href="/">
+            <Image
+              src="/images/OsmozeLogo.png"
+              alt="Osmoze Logo"
+              width={90}
+              height={90}
+            />
+          </Link>
           <div className="text-center sm:text-left">
             <h1 className="text-2xl sm:text-3xl font-bold">Osmoze’25</h1>
             <p className="text-lg mt-1">
