@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <>
     <Toaster position="top-center" reverseOrder={false} />
-    <nav className="w-full bg-gradient-to-r from-[#180F40] via-[#281287] to-[#180F40]  px-6 md:px-10 flex items-center shadow-lg relative z-50">
+    <nav className="w-full bg-gradient-to-r from-[#0c081d] via-[#1d0d64] to-[#0c081d]  px-6 md:px-10 flex items-center shadow-lg relative z-50">
       {/* Left: Logo */}
       <div className="flex items-center">
         <div className="w-[200px] md:w-[260px] h-auto flex items-center">
@@ -68,7 +68,7 @@ const Navbar = () => {
 
       {/* Center: Navigation Links (Desktop) */}
       <div className="hidden md:flex gap-8 text-[#F4F269] text-lg font-modernAntiqua justify-start ml-6">
-        {["AboutUs", "Team", "Events", "Announcements", "Dashboard"].map(
+        {/* {["AboutUs", "Team", "Events", "Announcements", "Dashboard"].map(
           (item, index) => (
             <Link
               key={index}
@@ -78,7 +78,28 @@ const Navbar = () => {
               {item}
             </Link>
           )
-        )}
+        )} */}
+        {["AboutUs", "Team", "Events", "Announcements", "Dashboard"].map((item, index) => (
+  item.toLowerCase() === "announcements" ? (
+    <a
+      key={index}
+      href="https://www.instagram.com/sochem_iitbhu/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+    >
+      {item}
+    </a>
+  ) : (
+    <Link
+      key={index}
+      href={`/${item.toLowerCase().replace(/ /g, "")}`}
+      className="relative px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+    >
+      {item}
+    </Link>
+  )
+))}
       </div>
 
       {/* Right: Login Button and Mobile Menu Button */}
@@ -124,7 +145,7 @@ const Navbar = () => {
             : "-translate-y-[200%] opacity-0 scale-90"
         } md:hidden`}
       >
-        {["AboutUs", "Team", "Events", "Announcements", "Dashboard"].map(
+        {/* {["AboutUs", "Team", "Events", "Announcements", "Dashboard"].map(
           (item, index) => (
             <Link
               key={index}
@@ -135,7 +156,31 @@ const Navbar = () => {
               {item}
             </Link>
           )
-        )}
+        )} */}
+        {["AboutUs", "Team", "Events", "Announcements", "Dashboard"].map((item, index) => (
+  item.toLowerCase() === "announcements" ? (
+    <a
+      key={index}
+      href="https://www.instagram.com/sochem_iitbhu/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[#DBD828] transition-colors duration-300"
+      onClick={() => setMenuOpen(false)}
+    >
+      {item}
+    </a>
+  ) : (
+    <Link
+      key={index}
+      href={`/${item.toLowerCase().replace(/ /g, "")}`}
+      className="hover:text-[#DBD828] transition-colors duration-300"
+      onClick={() => setMenuOpen(false)}
+    >
+      {item}
+    </Link>
+  )
+))}
+
         {user ? (
           <>
             
