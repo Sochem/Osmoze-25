@@ -101,7 +101,7 @@ const Navbar = () => {
         </div>
 
         {/* Center: Navigation Links (Desktop) */}
-        <div className="hidden md:flex gap-1 lg:gap-4 xl:gap-6 text-[#F4F269] text-sm lg:text-base xl:text-lg font-modernAntiqua justify-start ml-2 md:ml-4 lg:ml-6 flex-grow">
+        <div className="hidden md:flex gap-1 lg:gap-4 xl:gap-6 text-[#F4F269] text-sm lg:text-base xl:text-lg font-merriweather justify-start ml-2 md:ml-4 lg:ml-6 flex-grow">
           {navItems.map((item, index) =>
             item.external ? (
               <a
@@ -109,7 +109,7 @@ const Navbar = () => {
                 href={item.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative px-1 lg:px-2 md:gap-8 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 whitespace-nowrap"
+                className="relative px-1  lg:px-2 md:gap-8 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 whitespace-nowrap"
               >
                 {item.name}
               </a>
