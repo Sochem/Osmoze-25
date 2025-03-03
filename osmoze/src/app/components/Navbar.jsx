@@ -67,12 +67,12 @@ const Navbar = () => {
     { name: "AboutUs", path: "/aboutus" },
     { name: "Team", path: "/team" },
     { name: "Events", path: "/events" },
-    { 
-      name: "Announcements", 
-      path: "https://www.instagram.com/sochem_iitbhu/", 
-      external: true 
+    {
+      name: "Announcements",
+      path: "https://www.instagram.com/sochem_iitbhu/",
+      external: true,
     },
-    { name: "Dashboard", path: "/dashboard" }
+    { name: "Dashboard", path: "/dashboard" },
   ];
 
   return (
@@ -89,27 +89,27 @@ const Navbar = () => {
               height={80}
               className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
             />
-            <motion.span 
-              className="text-[#FFE15D] font-modernAntiqua text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl transition-colors duration-300 group-hover:text-[#F4F269] whitespace-nowrap"
+            <motion.span
+              className="text-[#FFE15D] font-merriweather font-bold mr-20 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl transition-colors duration-300 group-hover:text-[#F4F269] whitespace-nowrap"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Osmoze&apos;25
+              OSMOZE&apos;25
             </motion.span>
           </Link>
         </div>
 
         {/* Center: Navigation Links (Desktop) */}
         <div className="hidden md:flex gap-1 lg:gap-4 xl:gap-6 text-[#F4F269] text-sm lg:text-base xl:text-lg font-modernAntiqua justify-start ml-2 md:ml-4 lg:ml-6 flex-grow">
-          {navItems.map((item, index) => (
+          {navItems.map((item, index) =>
             item.external ? (
               <a
                 key={index}
                 href={item.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative px-1 lg:px-2 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 whitespace-nowrap"
+                className="relative px-1 lg:px-2 md:gap-8 transition-all duration-300 ease-in-out hover:text-[#DBD828] after:block after:w-full after:h-[2px] after:bg-[#DBD828] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 whitespace-nowrap"
               >
                 {item.name}
               </a>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
             )
-          ))}
+          )}
         </div>
 
         {/* Right: Login Button and Mobile Menu Button */}
@@ -155,7 +155,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button - Only visible on screens below tablet size (768px) */}
           <div className="md:hidden flex items-center">
-            <motion.button 
+            <motion.button
               onClick={() => setMenuOpen(!menuOpen)}
               whileTap={{ scale: 0.9 }}
               className="focus:outline-none"
@@ -198,17 +198,20 @@ const Navbar = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div 
+              <motion.div
                 className="px-3 py-1 xs:px-4 xs:py-2 flex justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="/" className="text-[#FFE15D] hover:text-[#F4F269] font-modernAntiqua text-base xs:text-xl transition-colors duration-300">
+                <Link
+                  href="/"
+                  className="text-[#FFE15D] hover:text-[#F4F269] font-modernAntiqua text-base xs:text-xl transition-colors duration-300"
+                >
                   Osmoze&apos;25
                 </Link>
               </motion.div>
-              
-              {navItems.map((item, index) => (
+
+              {navItems.map((item, index) =>
                 item.external ? (
                   <motion.a
                     key={index}
@@ -240,7 +243,7 @@ const Navbar = () => {
                     </Link>
                   </motion.div>
                 )
-              ))}
+              )}
 
               {user ? (
                 <motion.button
