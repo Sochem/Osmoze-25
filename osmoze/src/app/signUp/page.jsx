@@ -7,10 +7,13 @@ import { auth, provider } from "../../firebase/firebaseConfig";
 import { useRouter } from "next/navigation";
 import bg from "../../../public/images/SignUpBG.png"
 import toast, { Toaster } from 'react-hot-toast';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
 
 
 export default function SignUp() {
     const router = useRouter();
+
 
     const signUpWithGoogle = async () => {
         try {
@@ -27,17 +30,26 @@ export default function SignUp() {
                 return;
             }
 
-            localStorage.setItem('user', JSON.stringify({
+            const userDoc = await getDoc(doc(db, "users", email));
+            if (userDoc.exists()) {
+                await auth.signOut();
+                toast.error('User already exists. Please login instead.');
+                setTimeout(() => {
+                    router.push('/login');
+                }, 1000);
+                return;
+            }
+
+            localStorage.setItem('tempUser', JSON.stringify({
                 email: user.email,
                 name: user.displayName,
                 avatar: user.photoURL
             }));
 
-            toast.success('Signed up successfully! 🎉');
-            window.dispatchEvent(new Event('userStateChange'));
+            toast.success('Please enter the following details');
             setTimeout(() => {
-                router.push('/');
-            }, 1000);
+                router.push('/onboarding');
+            }, 500);
         } catch (err) {
             console.error("Error signing up: ", err);
             toast.error("An error occurred while signing up. Please try again. ❌");

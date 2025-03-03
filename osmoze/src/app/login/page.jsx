@@ -7,6 +7,8 @@ import { signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import bg from "../../../public/images/LoginBG.png"
 import toast, { Toaster } from 'react-hot-toast';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "@/firebase/firebaseConfig";
 
 export default function Login() {
     const router = useRouter();
@@ -26,6 +28,16 @@ export default function Login() {
                 return;
             }
 
+            const userDoc = await getDoc(doc(db, "users", email));
+            if (!userDoc.exists()) {
+                await auth.signOut();
+                toast.error('User not found. Please sign up first.');
+                setTimeout(() => {
+                    router.push('/signUp');
+                }, 1000);
+                return;
+            }
+
             localStorage.setItem('user', JSON.stringify({
                 email: user.email,
                 name: user.displayName,
@@ -36,7 +48,7 @@ export default function Login() {
             window.dispatchEvent(new Event('userStateChange'));
             setTimeout(() => {
                 router.push('/');
-            }, 1000);
+            }, 500);
         } catch (err) {
             console.error("Error logging in: ", err);
             toast.error(err.message || "An error occurred while logging in. Please try again. ❌");
