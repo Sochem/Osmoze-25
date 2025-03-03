@@ -57,9 +57,7 @@ const Navbar = () => {
     if (path === "/dashboard" && !user) {
       e.preventDefault();
       toast.error("Please login to access dashboard");
-      setTimeout(() => {
-        router.push("/login");
-      }, 100);
+      router.push("/login");
     }
   };
 

@@ -6,7 +6,7 @@ function AboutUs() {
     <div className="aboutus px-4 md:px-16">
       {/* Who We Are Section - Responsive */}
       <div className="flex flex-col justify-center min-h-screen w-full relative py-10">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl text-center mb-10">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl text-center mb-10  font-merriweather">
           ABOUT US
         </h2>
         <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8">
@@ -21,10 +21,10 @@ function AboutUs() {
 
           {/* About Us Text */}
           <div className="w-full md:w-1/2 px-4 md:px-6 text-center md:text-left">
-            <h3 className="text-yellow-400 text-3xl sm:text-4xl mb-4">
+            <h3 className="text-yellow-400 text-3xl sm:text-4xl mb-4  font-merriweather">
               Who are we?
             </h3>
-            <p className="text-lg sm:text-xl">
+            <p className="text-lg sm:text-xl  font-merriweather">
               The Society of Chemical Engineers (SoChem) is a student-run
               society that aims to enhance the technical and managerial skills
               of its members. It provides students with opportunities to engage
@@ -39,10 +39,10 @@ function AboutUs() {
       <div className="flex flex-col-reverse md:flex-row justify-between items-center w-full gap-8 py-10">
         {/* Mission Text */}
         <div className="w-full md:w-1/2 px-4 md:px-6 text-center md:text-left">
-          <h3 className="text-yellow-400 text-3xl sm:text-4xl mb-4">
+          <h3 className="text-yellow-400 text-3xl sm:text-4xl mb-4  font-merriweather">
             Our Mission
           </h3>
-          <p className="text-lg sm:text-xl">
+          <p className="text-lg sm:text-xl  font-merriweather">
             The society provides a platform for students to improve both their
             technical skills & personality. It also brings back the experience
             of our esteemed alumni to help budding engineers. Regular workshops,
