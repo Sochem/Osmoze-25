@@ -35,6 +35,15 @@ export default function dashboard() {
     slidesToScroll: 3,
   };
 
+  const settings_sm = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  };
+
+
   const events = [
     { id: 1, text: "Slide 1"},
     { id: 2, text: "Slide 2"},
@@ -107,8 +116,7 @@ export default function dashboard() {
               <button onClick={() => setisOpen(!setOpen)}>
                 {setOpen ? (
                   <div className="aboslute min-w-[10rem] pt-[10px] h-[100vh] top-0 left-0 flex-col 
-                   items-center gap-4 bg-[#09051A] 
-                  ">
+                   items-center gap-4 bg-[#09051A]">
                     <X className="text-white ml-[10px] w-8 h-8 transition-transform duration-300 m-0 transform rotate-180" />
                     <div className="flex flex-col justify-start h-full gap-10">
                       <Link href="/" passHref>
@@ -122,12 +130,13 @@ export default function dashboard() {
                         </Link>
                 
                       <ul className="space-y-4 text-yellow-300 hover:opacity-80 text-center text-md md:text-xl">
-                        <li className="hover:text -white cursor-pointer"><a href="/events">Instructions</a></li>
-                        <li  className="hover:text-white cursor-pointer"><a href="/dashboard">Dashboard</a></li>
+                        <li className="hover:text -white cursor-pointer"><a href="/events">Home</a></li>
+                       
                         <li className="hover:text-white cursor-pointer"><a href="/events">Event Registration</a></li>
-                        <li className="hover:text-white cursor-pointer"><a href="/login">Payment</a></li>
+                        <li className="hover:text-white cursor-pointer"><a href="https://www.instagram.com/sochem_iitbhu/">
+                          Announcements</a></li>
                         <li className="hover:text-white cursor-pointer"><a href="/aboutUs">Contact Us</a></li>
-                        <li className="hover:text-white cursor-pointer"><a href="/login">Profile</a></li>
+                        
                       </ul>
 
                       <Image
@@ -147,7 +156,7 @@ export default function dashboard() {
           
         </div>
 
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full justify-evenly gap-4">
           <div className="flex-1 flex-col max-h-[200px] p-4">
             <div className="flex flex-col lg:flex-row justify-between gap-4/5 items-center mt-4 mb-8">
               <div className="text-4xl font-bold text-white mb-6 md:ml-[50px]">
@@ -180,10 +189,22 @@ export default function dashboard() {
               </div>
             </div>
 
-          <div className="w-full max-w-4xl mx-auto my-10"> 
-            <Slider {...settings} className="relative z-0" >
+          <div className="w-full max-w-4xl mx-auto my-10 max-lg:hidden"> 
+            <Slider {...settings} >
               {events.map((e) => (
-                <div key={e.id} className={`lg:h-[150px] border-[5px] max-sm:w-25 max-sm:h-12
+                <div key={e.id} className={`lg:h-[125px] border-[5px] max-lg:w-25 max-lg:h-20
+                border-black ${lightTheme? "bg-[#3D6CBB] text-white":"bg-gray-200"}  
+                flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}> 
+                    {e.text}
+                </div>
+              ))}
+            </Slider>
+          </div>
+
+          <div className="w-full max-w-4xl mx-auto my-10 lg:hidden"> 
+            <Slider {...settings_sm} >
+              {events.map((e) => (
+                <div key={e.id} className={` border-[5px] max-lg:w-10 max-lg:h-[8rem]
                 border-black ${lightTheme? "bg-[#3D6CBB] text-white":"bg-gray-200"}  
                 flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}> 
                     {e.text}

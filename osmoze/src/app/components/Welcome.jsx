@@ -9,7 +9,7 @@ export default function WelcomeSection() {
       {/* Left Section */}
       <div className="relative z-10 md:w-2/5 text-center md:text-left flex flex-col items-center md:items-start space-y-4 sm:pt-4">
         <h3 className="text-lg md:text-xl text-yellow-300 font-merriweather">
-          Welcome to Annual
+          Welcome to the Annual
         </h3>
         <h1 className="text-4xl md:text-5xl font-bold font-merriweather">
           Chemical Extravaganza
