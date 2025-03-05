@@ -1,6 +1,6 @@
 [
     {
-      "title": "Osmocross",
+      "title": "Cricket",
       "description": "A thrilling competition featuring logic and crosswords, challenging participants to solve word puzzles under time constraints.",
       "prize": "$500",
       "image": "https://via.placeholder.com/300",
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "title": "Code Combat",
+      "title": "Football",
       "description": "A fast-paced coding competition where developers battle against time to solve algorithmic challenges.",
       "prize": "$750",
       "image": "https://via.placeholder.com/300",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "title": "Design Sprint",
+      "title": "Basketball",
       "description": "A UI/UX hackathon where designers create intuitive and visually appealing app interfaces within a short period.",
       "prize": "$600",
       "image": "https://via.placeholder.com/300",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "title": "Tech Quiz Show",
+      "title": "Badminton",
       "description": "A mind-bending quiz covering various topics from programming languages to emerging tech trends.",
       "prize": "$300",
       "image": "https://via.placeholder.com/300",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "title": "AI Challenge",
+      "title": "Valorant",
       "description": "A competition where teams develop innovative AI solutions to solve real-world problems.",
       "prize": "$1000",
       "image": "https://via.placeholder.com/300",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "title": "Cyber Security Hunt",
+      "title": "Chess",
       "description": "An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses. ",
       "prize": "$800",
       "image": "https://via.placeholder.com/300",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "title": "Robotics War",
+      "title": "ChemCoding",
       "description": "A robotics battle event where teams build and program robots to compete in various tasks.",
       "prize": "$1200",
       "image": "https://via.placeholder.com/300",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "title": "Esports Championship",
+      "title": "Udhyog",
       "description": "A high-energy esports tournament featuring popular multiplayer games with cash prizes.",
       "prize": "$1500",
       "image": "https://via.placeholder.com/300",
@@ -77,7 +77,25 @@
       ]
     },
     {
-      "title": "Startup Pitch Battle",
+      "title": "Adhyayan",
+      "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
+      "prize": "$2000",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Chemethon",
+      "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
+      "prize": "$2000",
+      "image": "https://via.placeholder.com/300",
+      "coordinators": [
+        { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
+      "title": "Simpozium",
       "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
       "prize": "$2000",
       "image": "https://via.placeholder.com/300",

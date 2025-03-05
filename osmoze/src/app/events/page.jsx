@@ -99,7 +99,7 @@ export default function EventsPage() {
                   Close
                 </button>
                 <button className="px-5 py-2 bg-blue-500 text-white rounded-lg hover:bg-yellow-600 transition">
-                  <a href="https://forms.gle/j3dRPfk4Urh3Vaev5"> Register Now
+                  <a href="https://forms.gle/uSvdiht2bcyViaYa8"> Register Now
                   </a>
                   
                 </button>
