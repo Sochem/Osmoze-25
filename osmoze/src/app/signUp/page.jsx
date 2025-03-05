@@ -5,7 +5,7 @@ import Link from "next/link";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase/firebaseConfig";
 import { useRouter } from "next/navigation";
-import bg from "../../../public/images/SignUpBG.png"
+import bg from "../../../public/images/SignUpBG.png";
 import toast, { Toaster } from 'react-hot-toast';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
@@ -14,7 +14,7 @@ import { db } from "../../firebase/firebaseConfig";
 export default function SignUp() {
     const router = useRouter();
 
-
+    
     const signUpWithGoogle = async () => {
         try {
             const result = await signInWithPopup(auth, provider);
@@ -40,16 +40,13 @@ export default function SignUp() {
                 return;
             }
 
-            localStorage.setItem('tempUser', JSON.stringify({
+            setUserData({
                 email: user.email,
                 name: user.displayName,
                 avatar: user.photoURL
-            }));
-
+            });
+            
             toast.success('Please enter the following details');
-            setTimeout(() => {
-                router.push('/onboarding');
-            }, 500);
         } catch (err) {
             console.error("Error signing up: ", err);
             toast.error("An error occurred while signing up. Please try again. ❌");
@@ -59,13 +56,14 @@ export default function SignUp() {
     return (
         <>
             <Toaster position="top-center" reverseOrder={false} />
+            
             <div className="w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
                 style={{ backgroundImage: `url(${bg.src})` }}>
                 <div className="w-full h-full backdrop-blur-sm flex justify-center">
                     <main>
-                        <div className="px-8 lg:px-8 h-[60rem] min-w-[25rem] ">
+                        <div className="px-8 lg:px-8 h-[60rem] min-w-[25rem]">
                             <div className="flex justify-center items-center h-[100vh] overflow-hidden bg-inherit">
-                                <div className="bg-[#180F40] shadow-md rounded-lg p-8 w-full max-w-  flex-shrink-0">
+                                <div className="bg-[#180F40] shadow-md rounded-lg p-8 w-full max-w-sm flex-shrink-0">
                                     <div className="flex justify-center mb-6">
                                         <Image
                                             src="/images/OsmozeLogoLogin.png"
@@ -76,7 +74,7 @@ export default function SignUp() {
                                         />
                                     </div>
                                     <div className="text-center pb-4">
-                                        <h2 className="text-3xl font-bold mb-1  text-white">
+                                        <h2 className="text-3xl font-bold mb-1 text-white">
                                             Osmoze<span className="text-sky-600">'25</span>
                                         </h2>
                                     </div>
@@ -85,7 +83,7 @@ export default function SignUp() {
                                         className="flex items-center border-s border-sky-400 border-2
                                         justify-center w-full bg-[#180F40] text-white py-2 px-4 rounded-[15px]
                                         hover:bg-[#281287] transition duration-300"
-                                        onClick={signUpWithGoogle}>
+                                        onClick={signUpWithGoogle}  >
                                         <FaGoogle className="mr-2 text-red-500" />
                                         Sign Up with Google
                                     </button>
@@ -104,6 +102,5 @@ export default function SignUp() {
                 </div>
             </div>
         </>
-    )
-};
-
+    );
+}
