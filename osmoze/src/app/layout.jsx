@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
         {!dashboard && <Navbar />}
         {children}
         {!dashboard && <Footer />}
+        
       </body>
     </html>
   );
