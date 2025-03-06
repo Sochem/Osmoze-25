@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { db } from "@/firebase/firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
 import toast, { Toaster } from "react-hot-toast";
+import Select from "react-select";
+import Link from "next/link";
 
 export default function Onboarding() {
   const router = useRouter();
@@ -24,6 +26,39 @@ export default function Onboarding() {
     }
     setUserEmail(JSON.parse(tempUser).email);
   }, []);
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSelectChange = (selectedOption, actionMeta) => {
+    setFormData({ ...formData, [actionMeta.name]: selectedOption });
+  };
+
+  const branches = [
+    { value: "BBE", label: "Biochemical/Biomedical Engineering" },
+    { value: "PHT", label: "Pharmaceutical Engineering" },
+    { value: "CHE", label: "Chemical Engineering" },
+    { value: "IC", label: "Industrial Chemistry" },
+    { value: "CER", label: "Ceramic Engineering" },
+    { value: "MST", label: "Material Sciences and Technology" },
+    { value: "MT", label: "Metallurgical Engineering" },
+    { value: "MI", label: "Mining Engineering" },
+    { value: "CSE", label: "Computer Science Engineering" },
+    { value: "MNC", label: "Mathematics and Computing" },
+    { value: "CE", label: "Civil Engineering" },
+    { value: "ME", label: "Mechanical Engineering" },
+    { value: "EE", label: "Electrical Engineering" },
+    { value: "ECE", label: "Electronics Engineering" },
+    { value: "EP", label: "Engineering Physics" },
+    { value: "ARCH", label: "Architecture & Planning" },
+  ];
+
+  const years = [
+    { value: "first", label: "First" },
+    { value: "second", label: "Second" },
+    { value: "third", label: "Third" },
+    { value: "fourth", label: "Fourth" },
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,109 +101,91 @@ export default function Onboarding() {
   return (
     <>
       <Toaster position="top-center" />
-      <div className="min-h-screen bg-[#180F40] flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg p-8 w-full max-w-md">
-          <h2 className="text-2xl font-bold mb-6 text-center">
-            Complete Your Profile info.
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block mb-1">Username</label>
+      <div className="min-h-screen bg-[#180F40] flex items-center justify-center p-4 bg-onboarding">
+        <div className=" bg-gradient-to-r from-[#0c081dde] via-[#2c178a] to-[#0c081d] shadow-lg rounded-2xl p-6 relative lg:w-[450px] md:w-[400px] w-[300px]">
+          <div className="flex flex-col items-center">
+            <img
+              src="/images/OsmozeLogo.png"
+              alt="Osmoze'25 Logo"
+              className="w-36 mb-1"
+            />
+
+            <h2 className="text-3xl font-bold mb-1 text-white">
+              Osmoze<span className="text-sky-600">'25</span>
+            </h2>
+
+            <p className="text-sm text-white">COMPLETE YOUR PROFILE</p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="mt-4">
+            <div className="mb-3  text-gray-700">
+              <label className="block text-sm mb-1 text-white">Username</label>
               <input
                 type="text"
-                className="w-full p-2 border rounded text-black"
+                name="username"
                 value={formData.username}
-                onChange={(e) =>
-                  setFormData({ ...formData, username: e.target.value })
-                }
+                onChange={handleInputChange}
+                className="w-full p-2 border rounded-md  focus:outline-none focus:ring focus:border-blue-300"
+                required
               />
             </div>
-            <div>
-              <label className="block mb-1">Branch</label>
-              <select
-                className="w-full p-2 border rounded text-black"
+
+            <div className="mb-3 text-gray-700">
+              <label className="block text-gray-800 text-sm mb-1 text-white">
+                Branch
+              </label>
+              <Select
+                options={branches}
                 value={formData.branch}
-                onChange={(e) =>
-                  setFormData({ ...formData, branch: e.target.value })
-                }
-              >
-                <option value="">Select Branch of study</option>
-                <option value="Biochemical-Biomedical Engineering">
-                  Biochemical/Biomedical Engineering
-                </option>
-                <option value="Pharmaceutical Engineering">
-                  Pharmaceutical Engineering
-                </option>
-                <option value="Chemical Engineering">
-                  Chemical Engineering
-                </option>
-                <option value="Industrial Chemistry">
-                  Industrial Chemistry
-                </option>
-                <option value="Ceramic Engineering">Ceramic Engineering</option>
-                <option value="Material-Sciences and Technology">
-                  Material Sciences and Technology
-                </option>
-                <option value="Metallurgical Engineering">
-                  Metallurgical Engineering
-                </option>
-                <option value="Mining Engineering">Mining Engineering</option>
-                <option value="Computer science Engineering">
-                  Computer Science Engineering
-                </option>
-                <option value="MNC (Mathematics and Computing)">
-                  Mathematics and Computing
-                </option>
-                <option value="Civil Engineering">Civil Engineering</option>
-                <option value="Mechanical Engineering">
-                  Mechanical Engineering
-                </option>
-                <option value="Electrical Engineering">
-                  Electrical Engineering
-                </option>
-                <option value="Electronics Engineering">
-                  Electronics Engineering
-                </option>
-                <option value="EP (Engineering Physics)">Engineering Physics</option>
-                <option value="Architecture & Planning">
-                  Architecture & Planning
-                </option>
-              </select>
-            </div>
-            <div>
-              <label className="block mb-1">Year</label>
-              <select
-                className="w-full p-2 border rounded text-black"
-                value={formData.year}
-                onChange={(e) =>
-                  setFormData({ ...formData, year: e.target.value })
-                }
-              >
-                <option value="">Select Year</option>
-                <option value="1st">1st Year</option>
-                <option value="2nd">2nd Year</option>
-                <option value="3rd">3rd Year</option>
-                <option value="4th">4th Year</option>
-              </select>
-            </div>
-            <div>
-              <label className="block mb-1">Phone Number</label>
-              <input
-                type="number"
-                className="w-full p-2 border rounded text-black"
-                value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
+                onChange={handleSelectChange}
+                name="branch"
+                className="w-full border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
             </div>
+
+            <div className="mb-3 text-gray-700">
+              <label className="block text-gray-800 text-sm mb-1 text-white">
+                Year
+              </label>
+              <Select
+                options={years}
+                value={formData.year}
+                onChange={handleSelectChange}
+                name="year"
+                className="w-full border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+            </div>
+
+            <div className="mb-3 text-gray-700">
+              <label className="block text-gray-800 text-sm mb-1 text-white">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+                className="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                required
+              />
+            </div>
+
             <button
               type="submit"
-              className="w-full bg-[#281287] text-white py-2 rounded hover:bg-[#180F40] transition duration-300"
+              className="w-full bg-blue-500 text-white py-2 mt-3 rounded-md hover:bg-blue-600 transition duration-200"
             >
               Register
             </button>
           </form>
+
+          <div className="text-center mt-2 text-sm text-white">
+            Already Registered?{" "}
+            <Link href={"/login"} passHref>
+              <button className="text-yellow-200 hover:underline">
+                Log In
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

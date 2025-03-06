@@ -4,8 +4,8 @@ import dark from "../../../public/images/LoginBG.png";
 import light from "../../../public/images/LightModeBG.png";
 import Image from "next/image";
 import Link from "next/link";
-import Slider from "react-slick"
-import {Menu, X} from "lucide-react"
+import Slider from "react-slick";
+import { Menu, X } from "lucide-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -15,9 +15,9 @@ import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 export default function dashboard() {
-  const [lightTheme, setLightTheme] = useState(false)
-  const [bgImage, setBgImage] = useState(dark.src)
-  const [setOpen, setisOpen] = useState(false)
+  const [lightTheme, setLightTheme] = useState(false);
+  const [bgImage, setBgImage] = useState(dark.src);
+  const [setOpen, setisOpen] = useState(false);
 
   const changeTheme = () => {
     setLightTheme(!lightTheme);
@@ -43,16 +43,15 @@ export default function dashboard() {
     slidesToScroll: 2,
   };
 
-
   const events = [
-    { id: 1, text: "Slide 1"},
-    { id: 2, text: "Slide 2"},
-    { id: 3, text: "Slide 3"},
-    { id: 4, text: "Slide 4"},
-    { id: 5, text: "Slide 5"},
+    { id: 1, text: "Slide 1" },
+    { id: 2, text: "Slide 2" },
+    { id: 3, text: "Slide 3" },
+    { id: 4, text: "Slide 4" },
+    { id: 5, text: "Slide 5" },
     { id: 6, text: "Slide 6" },
     { id: 7, text: "Slide 7" },
-  ]
+  ];
 
   const router = useRouter();
   const [user, setUser] = useState(null);
@@ -154,21 +153,20 @@ export default function dashboard() {
                         
                       </ul>
 
-                      <Image
+                    <Image
                       src="/images/Legacy.png"
                       alt="Logo"
                       width={100}
                       height={100}
-                      className="object-contain mx-auto" />
-
-                    </div>
-                    </div>
-                ) : (
-                  <Menu className="text-white ml-[10px] mt-[10px] w-8 h-8 transition-transform duration-300 transform rotate-0" />
-                )}
-              </button>
-            </div>
-          
+                      className="object-contain mx-auto"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <Menu className="text-white ml-[10px] mt-[10px] w-8 h-8 transition-transform duration-300 transform rotate-0" />
+              )}
+            </button>
+          </div>
         </div>
 
         <div className="flex flex-col w-full justify-evenly gap-4">
@@ -186,43 +184,61 @@ export default function dashboard() {
                   height={100}
                 />
                 <span className="text-[#CC9292] text-lg md:text-2xl block font-bold mt-2">
-                  {user?.name ? user.name.split(' ').slice(0, 2).join(' ') : "Guest"}
+                  {user?.name
+                    ? user.name.split(" ").slice(0, 2).join(" ")
+                    : "Guest"}
                 </span>
               </div>
             </div>
           </div>
-            <div className="border border-white bg-[#180F40] text-white p-5 mt-8 mx-auto 
-             lg:w-3/4 w-3/4 rounded-lg">
-              <div className="text-2xl md:text-3xl text-yellow-300 font-semibold mb-2">
-                Registered Events
-              </div>
-              <div className={`border border-white ${lightTheme? "bg-[#3D6CBB] text-white" : "bg-[#4FA6DA]"}  text-black text-lg px-5 p-2 mt-2`}>
-                EVENTS
-              </div>
-              <div className="text-white mt-3 text-center">
-                Not Registered For Any Events
-              </div>
+          <div
+            className="border border-white bg-[#180F40] text-white p-5 mt-8 mx-auto 
+             lg:w-3/4 w-3/4 rounded-lg"
+          >
+            <div className="text-2xl md:text-3xl text-yellow-300 font-semibold mb-2">
+              Registered Events
             </div>
+            <div
+              className={`border border-white ${
+                lightTheme ? "bg-[#3D6CBB] text-white" : "bg-[#4FA6DA]"
+              }  text-black text-lg px-5 p-2 mt-2`}
+            >
+              EVENTS
+            </div>
+            <div className="text-white mt-3 text-center">
+              Not Registered For Any Events
+            </div>
+          </div>
 
-          <div className="w-full max-w-4xl mx-auto my-10 max-lg:hidden"> 
-            <Slider {...settings} >
+          <div className="w-full max-w-4xl mx-auto my-10 max-lg:hidden">
+            <Slider {...settings}>
               {events.map((e) => (
-                <div key={e.id} className={`lg:h-[125px] border-[5px] max-lg:w-25 max-lg:h-20
-                border-black ${lightTheme? "bg-[#3D6CBB] text-white":"bg-gray-200"}  
-                flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}> 
-                    {e.text}
+                <div
+                  key={e.id}
+                  className={`lg:h-[125px] border-[5px] max-lg:w-25 max-lg:h-20
+                border-black ${
+                  lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"
+                }  
+                flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
+                >
+                  {e.text}
                 </div>
               ))}
             </Slider>
           </div>
 
-          <div className="w-full max-w-4xl mx-auto my-10 lg:hidden"> 
-            <Slider {...settings_sm} >
+          <div className="w-full max-w-4xl mx-auto my-10 lg:hidden">
+            <Slider {...settings_sm}>
               {events.map((e) => (
-                <div key={e.id} className={` border-[5px] max-lg:w-10 max-lg:h-[8rem]
-                border-black ${lightTheme? "bg-[#3D6CBB] text-white":"bg-gray-200"}  
-                flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}> 
-                    {e.text}
+                <div
+                  key={e.id}
+                  className={` border-[5px] max-lg:w-10 max-lg:h-[8rem]
+                border-black ${
+                  lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"
+                }  
+                flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
+                >
+                  {e.text}
                 </div>
               ))}
             </Slider>
@@ -237,6 +253,5 @@ export default function dashboard() {
         </div>
       </div>
     </>
-  )
-};
-
+  );
+}

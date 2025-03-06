@@ -17,7 +17,15 @@
 .bg-team {
     background-image: url('/images/image.png');
     background-size: 100% 100%;
+    
+    background-position: center;
+    background-attachment:fixed;
+}
 
+.bg-onboarding{
+    background-image: url('/images/LoginBG.png');
+    background-size: 100% 100%;
+    
     background-position: center;
     background-attachment:fixed;
 }
