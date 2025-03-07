@@ -32,7 +32,7 @@ export default function dashboard() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -46,20 +46,20 @@ export default function dashboard() {
     slidesToScroll: 2,
   };
 
-  const events = [
-    { id: 1, text: "Cricket" },
-    { id: 2, text: "Football" },
-    { id: 3, text: "Basketball" },
-    { id: 4, text: "Badminton" },
-    { id: 5, text: "Valorant" },
-    { id: 6, text: "Chess" },
-    { id: 7, text: "Chem Coding" },
-    { id: 8, text: "Udhyog" },
-    { id: 9, text: "Adhyayan" },
-    { id: 10, text: "Chem Memes" },
-    { id: 11, text: "Chemethon" },
-    { id: 12, text: "Simpozium" },
-  ];
+  // const events = [
+  //   { id: 1, text: "Cricket" },
+  //   { id: 2, text: "Football" },
+  //   { id: 3, text: "Basketball" },
+  //   { id: 4, text: "Badminton" },
+  //   { id: 5, text: "Valorant" },
+  //   { id: 6, text: "Chess" },
+  //   { id: 7, text: "Chem Coding" },
+  //   { id: 8, text: "Udhyog" },
+  //   { id: 9, text: "Adhyayan" },
+  //   { id: 10, text: "Chem Memes" },
+  //   { id: 11, text: "Chemethon" },
+  //   { id: 12, text: "Simpozium" },
+  // ];
 
 
   const router = useRouter();
@@ -218,11 +218,11 @@ export default function dashboard() {
               </div>
             </div>
           </div>
-          <div className="border border-white bg-[#180F40] text-white p-5 mt-8 mx-auto lg:w-3/4 w-3/4 rounded-lg">
+          <div className="border border-white bg-[#180F40] text-white p-4 mt-6 mx-auto lg:w-3/4 w-3/4 rounded-lg">
             <div className="text-2xl md:text-3xl text-yellow-300 font-semibold mb-2">
               Registered Events
             </div>
-            {loading ? (
+            {/* {loading ? (
               <div className="text-white text-center py-4 text-md">Loading...</div>
             ) : (
               <>
@@ -244,40 +244,50 @@ export default function dashboard() {
                   </div>
                 )}
               </>
+            )} */}
+          </div>
+
+          <div className="w-full max-w-4xl mx-auto my-5 max-lg:hidden">
+            {event && event.length > 0 ? (
+              <Slider {...settings}>
+                {event.map((eve, index) => (
+                  <div
+                    key={index}
+                    className={`lg:h-[125px] border-[5px] max-lg:w-25 max-lg:h-20
+          border-black ${lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"}  
+          flex text-center align-middle my-auto justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
+                  >
+                    {eve}
+                  </div>
+                ))}
+              </Slider>
+            ) : (
+              <div className="text-white text-center md:text-2xl text-xl font-bold bg-[#180F40] ">
+                Not Registered For Any Events Yet
+              </div>
             )}
           </div>
 
-          <div className="w-full max-w-4xl mx-auto my-10 max-lg:hidden">
-            <Slider {...settings}>
-              {events.map((e) => (
-                <div
-                  key={e.id}
-                  className={`lg:h-[125px] border-[5px] max-lg:w-25 max-lg:h-20
-                border-black ${lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"
-                    }  
-                flex text-center align-middle my-auto justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
-                >
-                  {e.text}
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          <div className="w-full max-w-4xl mx-auto my-10 lg:hidden">
-            <Slider {...settings_sm}>
-              {events.map((e) => (
-                <div
-                  key={e.id}
-                  className={` border-[5px] max-lg:w-10 max-lg:h-[8rem]
-                border-black ${lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"
-                    }  
-                flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
-                >
-                  {e.text}
-                </div>
-              ))}
-            </Slider>
-          </div>
+          {/* <div className="w-full max-w-4xl mx-auto my-10 lg:hidden">
+  {event && event.length > 0 ? (
+    <Slider {...settings_sm}>
+      {event.map((eve, index) => (
+        <div
+          key={index}
+          className={`border-[5px] max-lg:w-10 max-lg:h-[8rem]
+          border-black ${lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"}  
+          flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
+        >
+          {eve}
+        </div>
+      ))}
+    </Slider>
+  ) : (
+    <div className="text-white text-center text-xl">
+      Not Registered For Any Events Yet
+    </div>
+  )}
+</div> */}
 
           {/* <hr className={`${lightTheme? "border-black" : "border-white"} w-full border my-4`}></hr> */}
           <div className="flex justify-between">
