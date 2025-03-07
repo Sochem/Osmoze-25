@@ -70,14 +70,17 @@ export default function dashboard() {
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
-      <div
-        className={`relative flex h-screen w-screen bg-cover bg-center overflow-hidden`}
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <div
-          className="max-lg:hidden w-1/4 min-w-[150px] max-w-[300px] bg-[#09051A] text-yellow-300 flex flex-col justify-evenly text-center h-screen p-4 
-            md:w-1/5 lg:w-1/4 xl:w-1/4"
-        >
+      <div className={`relative flex h-screen w-screen bg-cover bg-center overflow-hidden`}
+           style={{ backgroundImage: `url(${bgImage})` }}>
+            
+        <div className="max-lg:hidden w-1/4 min-w-[150px] max-w-[300px] bg-[#09051A] text-yellow-300 flex flex-col justify-evenly text-center h-screen p-4 
+            md:w-1/5 lg:w-1/4 xl:w-1/4">
+              <button className="absolute top-4 left-4  hover:opacity-80 cursor-pointer" onClick={() => {changeTheme(); changeBG() }}>
+                {lightTheme ? (
+                  <FaMoon size={30} color="white"/>
+                ):<FaSun size={30}/>}
+                </button>
+          
           <Link href="/" passHref>
             <Image
               src="/images/OsmozeLogoLogin.png"
@@ -116,42 +119,39 @@ export default function dashboard() {
 
         <div className="lg:hidden relative z-[999] top-0 left-0 ml-auto gap-4">
           <div className="lg:hidden absolute items-center transition-transform duration-500 ease-in-out ">
-            <button onClick={() => setisOpen(!setOpen)}>
-              {setOpen ? (
-                <div
-                  className="aboslute min-w-[10rem] pt-[10px] h-[100vh] top-0 left-0 flex-col 
-                   items-center gap-4 bg-[#09051A]"
-                >
-                  <X className="text-white ml-[10px] w-8 h-8 transition-transform duration-300 m-0 transform rotate-180" />
-                  <div className="flex flex-col justify-start h-full gap-10">
-                    <Link href="/" passHref>
-                      <Image
-                        src="/images/OsmozeLogoLogin.png"
-                        alt="Logo"
-                        href="/"
-                        width={100}
-                        height={100}
-                        className="object-contain mx-auto"
-                      />
-                    </Link>
-
-                    <ul className="space-y-4 text-yellow-300 hover:opacity-80 text-center text-md md:text-xl">
-                      <li className="hover:text -white cursor-pointer">
-                        <a href="/events">Home</a>
-                      </li>
-
-                      <li className="hover:text-white cursor-pointer">
-                        <a href="/events">Event Registration</a>
-                      </li>
-                      <li className="hover:text-white cursor-pointer">
-                        <a href="https://www.instagram.com/sochem_iitbhu/">
-                          Announcements
-                        </a>
-                      </li>
-                      <li className="hover:text-white cursor-pointer">
-                        <a href="/aboutUs">Contact Us</a>
-                      </li>
-                    </ul>
+              <button onClick={() => setisOpen(!setOpen)}>
+                {setOpen ? (
+                  <div className="aboslute min-w-[10rem] pt-[10px] h-[100vh] top-0 left-0 flex-col 
+                   items-center gap-4 bg-[#09051A]">
+                    <div className="flex justify-between mb-5">
+                      <X className="text-white ml-[10px] w-8 h-8 transition-transform duration-300 m-0 transform rotate-180" />
+                      <button className="hover:opacity-80 mr-[10px] cursor-pointer" onClick={() => {changeTheme(); changeBG() }}>
+                        {lightTheme ? (
+                          <FaMoon size={28} color="white"/>
+                        ):<FaSun size={28} color="yellow"/>}
+                        </button>
+                    </div>
+                    
+                    <div className="flex flex-col justify-start h-full gap-10">
+                      <Link href="/" passHref>
+                        <Image
+                          src="/images/OsmozeLogoLogin.png"
+                          alt="Logo"
+                          href="/"
+                          width={100}
+                          height={100}
+                          className="object-contain mx-auto" />
+                        </Link>
+                
+                      <ul className="space-y-4 text-yellow-300 hover:opacity-80 text-center text-md md:text-xl">
+                        <li className="hover:text -white cursor-pointer"><a href="/events">Home</a></li>
+                       
+                        <li className="hover:text-white cursor-pointer"><a href="/events">Event Registration</a></li>
+                        <li className="hover:text-white cursor-pointer"><a href="https://www.instagram.com/sochem_iitbhu/">
+                          Announcements</a></li>
+                        <li className="hover:text-white cursor-pointer"><a href="/aboutUs">Contact Us</a></li>
+                        
+                      </ul>
 
                     <Image
                       src="/images/Legacy.png"
@@ -244,33 +244,11 @@ export default function dashboard() {
             </Slider>
           </div>
 
-          <hr
-            className={`${
-              lightTheme ? "border-black" : "border-white"
-            } w-full border my-4`}
-          ></hr>
+          {/* <hr className={`${lightTheme? "border-black" : "border-white"} w-full border my-4`}></hr> */}
           <div className="flex justify-between">
-            <a
-              href="/"
-              className={`${
-                lightTheme ? "text-black" : "text-yellow-300"
-              } ml-[20px] inline text-2xl text-left  hover:opacity-80`}
-            >
-              Home{" "}
-            </a>
-            <button
-              className="mr-[20px] hover:opacity-80 cursor-pointer"
-              onClick={() => {
-                changeTheme();
-                changeBG();
-              }}
-            >
-              {lightTheme ? (
-                <FaMoon size={30} color="black" />
-              ) : (
-                <FaSun size={30} />
-              )}
-            </button>
+            {/* <a href="/" className={`${lightTheme? "text-black":"text-yellow-300"} ml-[20px] inline text-2xl text-left  hover:opacity-80`}>
+            Home </a> */}
+            
           </div>
         </div>
       </div>
