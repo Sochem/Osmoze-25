@@ -1,9 +1,19 @@
 [
     {
+      "title": "Osmoclick",
+      "description": "Gear up for Osmoclick, the thrilling pre-event of Osmoze'25, where your photography skills meet the essence of Banaras! Hosted by Society of Chemical Engineers and The Photography Club, IIT BHU, this online contest invites you to showcase your vision through the lens.",
+      "prize": "",
+      "image": "/images/osmoclick.jpg",
+      "coordinators": [
+        { "name": "Swetha", "contact": "+91-8500257575" },
+        { "name": "Arpna", "contact": "xxxxxxxxxx" }
+      ]
+    },
+    {
       "title": "Cricket",
       "description": "A thrilling competition featuring logic and crosswords, challenging participants to solve word puzzles under time constraints.",
       "prize": "$500",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/cricket.jpg",
       "coordinators": [
         { "name": "Pratham Aggarwal", "contact": "xxxxxxxxxx" },
         { "name": "Arpna", "contact": "xxxxxxxxxx" }
@@ -13,7 +23,7 @@
       "title": "Football",
       "description": "A fast-paced coding competition where developers battle against time to solve algorithmic challenges.",
       "prize": "$750",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/football.jpg",
       "coordinators": [
         { "name": "Rahul Verma", "contact": "xxxxxxxxxx" },
         { "name": "Neha Sharma", "contact": "xxxxxxxxxx" }
@@ -32,17 +42,17 @@
       "title": "Badminton",
       "description": "A mind-bending quiz covering various topics from programming languages to emerging tech trends.",
       "prize": "$300",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/badminton.jpg",
       "coordinators": [
         { "name": "Amit Patel", "contact": "xxxxxxxxxx" },
         { "name": "Riya Gupta", "contact": "xxxxxxxxxx" }
       ]
     },
     {
-      "title": "Valorant",
+      "title": "Valosmoze",
       "description": "A competition where teams develop innovative AI solutions to solve real-world problems.",
       "prize": "$1000",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/valosmoze.jpg",
       "coordinators": [
         { "name": "Kunal Roy", "contact": "xxxxxxxxxx" }
       ]
@@ -51,7 +61,7 @@
       "title": "Chess",
       "description": "An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses. ",
       "prize": "$800",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/chess.jpg",
       "coordinators": [
         { "name": "Aditya Kumar", "contact": "xxxxxxxxxx" },
         { "name": "Shweta Agarwal", "contact": "xxxxxxxxxx" }
@@ -61,16 +71,16 @@
       "title": "ChemCoding",
       "description": "A robotics battle event where teams build and program robots to compete in various tasks.",
       "prize": "$1200",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/chemcoding.jpg",
       "coordinators": [
         { "name": "Deepak Joshi", "contact": "xxxxxxxxxx" }
       ]
     },
     {
-      "title": "Udhyog",
+      "title": "Udyog",
       "description": "A high-energy esports tournament featuring popular multiplayer games with cash prizes.",
       "prize": "$1500",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/udyog.jpg",
       "coordinators": [
         { "name": "Aniket Sen", "contact": "xxxxxxxxxx" },
         { "name": "Kritika Bansal", "contact": "xxxxxxxxxx" }
@@ -80,7 +90,7 @@
       "title": "Adhyayan",
       "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
       "prize": "$2000",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/adhyayan.jpg",
       "coordinators": [
         { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
       ]
@@ -95,10 +105,10 @@
       ]
     },
     {
-      "title": "Simpozium",
+      "title": "Symposium",
       "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
       "prize": "$2000",
-      "image": "https://via.placeholder.com/300",
+      "image": "/images/symposium.jpg",
       "coordinators": [
         { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
       ]
