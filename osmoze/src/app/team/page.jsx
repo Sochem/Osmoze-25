@@ -90,7 +90,7 @@ function Team() {
               image: "/images/KeyurkumarKanjariya.jpg",
             },
             {
-              name: "Priyansu Jaiswal",
+              name: "Priyanshu Jaiswal",
               image: "/images/Priyanshu Jaiswal.jpg",
             },
           ]}
