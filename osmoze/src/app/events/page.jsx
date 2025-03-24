@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import EventCard from "../components/EventCard";
 import Image from "next/image";
@@ -34,11 +34,19 @@ export default function EventsPage() {
       </section>
 
       {/* Hide event cards when modal is open */}
-      <div className={`transition-all duration-300 ${selectedEvent ? "hidden" : "block"}`}>
+      <div
+        className={`transition-all duration-300 ${
+          selectedEvent ? "hidden" : "block"
+        }`}
+      >
         <div className="flex flex-col items-center space-y-8 px-4 sm:px-8 md:px-16 lg:px-24">
           {events.length > 0 ? (
             events.map((event, index) => (
-              <EventCard key={index} event={event} setSelectedEvent={setSelectedEvent} />
+              <EventCard
+                key={index}
+                event={event}
+                setSelectedEvent={setSelectedEvent}
+              />
             ))
           ) : (
             <p className="text-center text-gray-300">Loading events...</p>
@@ -50,7 +58,6 @@ export default function EventsPage() {
       {selectedEvent && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-sm px-4 sm:px-6 md:px-8">
           <div className="relative bg-blue-900 bg-opacity-70 rounded-2xl p-6 w-full max-w-3xl flex flex-col sm:flex-row justify-between items-center shadow-lg pb-4 min-h-[200px]">
-          
             {/* Close Button (Inside the Modal, Top Right) */}
             <button
               onClick={() => setSelectedEvent(null)}
@@ -72,23 +79,27 @@ export default function EventsPage() {
 
             {/* Event Details - Adjusted for Small Screens */}
             <div className="w-full sm:w-2/3 sm:pl-6 text-center sm:text-left">
-              <h2 className="text-2xl sm:text-3xl font-modern font-semibold text-yellow-300">{selectedEvent.title}</h2>
+              <h2 className="text-2xl sm:text-3xl font-modern font-semibold text-yellow-300">
+                {selectedEvent.title}
+              </h2>
               <p className="mt-2 text-gray-200">{selectedEvent.description}</p>
 
               {/* Coordinators */}
               <div className="flex flex-wrap justify-center sm:justify-between mt-4 text-gray-300">
                 {selectedEvent.coordinators?.map((coordinator, index) => (
                   <div key={index} className="text-center px-2">
-                    <p className="font-semibold text-white">{coordinator.name}</p>
+                    <p className="font-semibold text-white">
+                      {coordinator.name}
+                    </p>
                     <p>{coordinator.contact}</p>
                   </div>
                 ))}
               </div>
 
               {/* Prize */}
-              <p className="mt-4 font-bold text-yellow-300">
+              {/* <p className="mt-4 font-bold text-yellow-300">
                 Prize Worth: {selectedEvent.prize}
-              </p>
+              </p> */}
 
               {/* Buttons */}
               <div className="mt-6 flex flex-wrap justify-center sm:justify-start space-x-4">
@@ -98,10 +109,21 @@ export default function EventsPage() {
                 >
                   Close
                 </button>
-                <button className="px-5 py-2 bg-blue-500 text-white rounded-lg hover:bg-yellow-600 transition">
-                  <a href="https://forms.gle/uSvdiht2bcyViaYa8"> Register Now
-                  </a>
-                  
+                <button
+                  className={`px-5 py-2 ${
+                    selectedEvent.launch
+                      ? "bg-blue-500 hover:bg-yellow-600"
+                      : "bg-gray-500 cursor-not-allowed"
+                  } text-white rounded-lg transition`}
+                  disabled={!selectedEvent.launch}
+                >
+                  {selectedEvent.launch ? (
+                    <a href="https://forms.gle/uSvdiht2bcyViaYa8">
+                      Register Now
+                    </a>
+                  ) : (
+                    "Coming Soon..."
+                  )}
                 </button>
               </div>
             </div>

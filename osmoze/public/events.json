@@ -1,117 +1,102 @@
 [
-    {
-      "title": "Osmoclick",
-      "description": "Gear up for Osmoclick, the thrilling pre-event of Osmoze'25, where your photography skills meet the essence of Banaras! Hosted by Society of Chemical Engineers and The Photography Club, IIT BHU, this online contest invites you to showcase your vision through the lens.",
-      "prize": "",
-      "image": "/images/osmoclick.jpg",
-      "coordinators": [
-        { "name": "Swetha", "contact": "+91-8500257575" },
-        { "name": "Arpna", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Cricket",
-      "description": "A thrilling competition featuring logic and crosswords, challenging participants to solve word puzzles under time constraints.",
-      "prize": "$500",
-      "image": "/images/cricket.jpg",
-      "coordinators": [
-        { "name": "Pratham Aggarwal", "contact": "xxxxxxxxxx" },
-        { "name": "Arpna", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Football",
-      "description": "A fast-paced coding competition where developers battle against time to solve algorithmic challenges.",
-      "prize": "$750",
-      "image": "/images/football.jpg",
-      "coordinators": [
-        { "name": "Rahul Verma", "contact": "xxxxxxxxxx" },
-        { "name": "Neha Sharma", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Basketball",
-      "description": "A UI/UX hackathon where designers create intuitive and visually appealing app interfaces within a short period.",
-      "prize": "$600",
-      "image": "https://via.placeholder.com/300",
-      "coordinators": [
-        { "name": "Sanya Mehta", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Badminton",
-      "description": "A mind-bending quiz covering various topics from programming languages to emerging tech trends.",
-      "prize": "$300",
-      "image": "/images/badminton.jpg",
-      "coordinators": [
-        { "name": "Amit Patel", "contact": "xxxxxxxxxx" },
-        { "name": "Riya Gupta", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Valosmoze",
-      "description": "A competition where teams develop innovative AI solutions to solve real-world problems.",
-      "prize": "$1000",
-      "image": "/images/valosmoze.jpg",
-      "coordinators": [
-        { "name": "Kunal Roy", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Chess",
-      "description": "An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses.An ethical hacking challenge where participants identify security vulnerabilities and strengthen digital defenses. ",
-      "prize": "$800",
-      "image": "/images/chess.jpg",
-      "coordinators": [
-        { "name": "Aditya Kumar", "contact": "xxxxxxxxxx" },
-        { "name": "Shweta Agarwal", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "ChemCoding",
-      "description": "A robotics battle event where teams build and program robots to compete in various tasks.",
-      "prize": "$1200",
-      "image": "/images/chemcoding.jpg",
-      "coordinators": [
-        { "name": "Deepak Joshi", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Udyog",
-      "description": "A high-energy esports tournament featuring popular multiplayer games with cash prizes.",
-      "prize": "$1500",
-      "image": "/images/udyog.jpg",
-      "coordinators": [
-        { "name": "Aniket Sen", "contact": "xxxxxxxxxx" },
-        { "name": "Kritika Bansal", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Adhyayan",
-      "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
-      "prize": "$2000",
-      "image": "/images/adhyayan.jpg",
-      "coordinators": [
-        { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Chemethon",
-      "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
-      "prize": "$2000",
-      "image": "https://via.placeholder.com/300",
-      "coordinators": [
-        { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
-      ]
-    },
-    {
-      "title": "Symposium",
-      "description": "An entrepreneurial challenge where startups pitch their innovative ideas to potential investors.",
-      "prize": "$2000",
-      "image": "/images/symposium.jpg",
-      "coordinators": [
-        { "name": "Varun Malhotra", "contact": "xxxxxxxxxx" }
-      ]
-    }
-  ]
-  
+  {
+    "title": "Cricket",
+    "description": "Cricket isn’t just a game—it’s a battle of skill, strategy, and endurance! SoChem’s Cricket Tournament is set to witness powerful strokes, fiery deliveries, and unforgettable moments on the pitch. Gather your squad, aim for the trophy, and play with passion.",
+    "prize": "",
+    "image": "/images/cricket.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Football",
+    "description": "The football fever is here! SoChem’s Football Tournament is all about teamwork, strategy, and adrenaline-fueled action. Lace up your shoes, form your dream team, and compete for glory. Every pass, every goal, and every moment on the field brings you closer to victory.",
+    "prize": "$750",
+    "image": "/images/football.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Basketball",
+    "description": "The basketball madness is here! SoChem’s Basketball Tournament is all about skill, speed, and high-energy competition. Grab your jerseys, assemble your dream squad, and hit the court for an electrifying showdown. Every dribble, every dunk, and every clutch shot takes you one step closer to victory!",
+    "prize": "$600",
+    "image": "https://via.placeholder.com/300",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Badminton",
+    "description": "Agility meets precision in SoChem’s Badminton Tournament! Step onto the court, rally with skill, and unleash powerful smashes to claim the crown. Whether you're aiming for a perfect drop shot or a game-winning smash, every point brings you closer to glory.",
+    "prize": "$300",
+    "image": "/images/badminton.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Valosmoze",
+    "description": "Gear up for an intense Valorant showdown in SoChem’s Valosmoze tournament! Precision, strategy, and teamwork will determine who dominates the battlefield. Assemble your squad, execute flawless plays, and climb to the top as the ultimate champions. Do you have what it takes to clutch the game?",
+    "prize": "$1000",
+    "image": "/images/valosmoze.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Chess",
+    "description": "Get set to unlock your inner grandmaster! As Team Osmoze'25 brings you the Chess Tournament, where strategy meets intellect. Minds will collide, kings will fall, and the brightest minds will battle it out on the chessboard. An opportunity to showcase your skills, compete with fellow chess enthusiasts, and claim your victory!",
+    "prize": "$800",
+    "image": "/images/chess.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "ChemCoding",
+    "description": "Get ready to put your programming skills to the test in SoChem’s Chem Coding competition! Solve coding challenges, showcase your logical thinking, and outsmart the competition. Whether you're a seasoned coder or a curious beginner, this is your chance to blend technology with chemical concepts. Are you up for the challenge? s",
+    "prize": "$1200",
+    "image": "/images/chemcoding.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Udyog",
+    "description": "Greetings from Team Osmoze'25! Presenting Udyog, a Chemical Core Case Competition in collaboration with SoChem. Dive into real-world challenges, test your knowledge, and unleash your problem-solving skills.This is your chance to apply chemical engineering concepts in a competitive environment and stand a chance to win exciting prizes ",
+    "prize": "$1500",
+    "image": "/images/udyog.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Adhyayan",
+    "description": "Greetings from Team Osmoze'25! Embrace the challenge with Adhyayan'25, a Business Case Study Competition in collaboration with SoChem. Where your analytical expertise meets real-world problem-solving! ate your strategic thinking, solve business challenges, and showcase your entrepreneurial mindset. ",
+    "prize": "$2000",
+    "image": "/images/adhyayan.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Chemathon",
+    "description": "Step into the corporate world with Chemathon, the Resume Interview Competition, where you get the chance to refine your resume and sharpen your interview skills. Showcase your professional strengths, gain real-time feedback, and get one step closer to career excellence.",
+    "prize": "$2000",
+    "image": "/images/chemathon.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  }
+]
