@@ -82,6 +82,19 @@ function Team() {
             },
           ]}
         />
+        <TeamSection
+          title="Marketing Heads"
+          members={[
+            {
+              name: "KeyurKumar Kanjariya",
+              image: "/images/KeyurkumarKanjariya.jpg",
+            },
+            {
+              name: "Priyanshu Jaiswal",
+              image: "/images/Priyanshu Jaiswal.jpg",
+            },
+          ]}
+        />
 
         <TeamSection
           title="Operation Heads"
