@@ -86,9 +86,9 @@ export default function EventsPage() {
               </div>
 
               {/* Prize */}
-              <p className="mt-4 font-bold text-yellow-300">
+              {/* <p className="mt-4 font-bold text-yellow-300">
                 Prize Worth: {selectedEvent.prize}
-              </p>
+              </p> */}
 
               {/* Buttons */}
               <div className="mt-6 flex flex-wrap justify-center sm:justify-start space-x-4">
