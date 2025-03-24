@@ -1,93 +1,102 @@
 [
-    {
-      "title": "Cricket",
-      "description": "Cricket isn’t just a game—it’s a battle of skill, strategy, and endurance! SoChem’s Cricket Tournament is set to witness powerful strokes, fiery deliveries, and unforgettable moments on the pitch. Gather your squad, aim for the trophy, and play with passion.",
-      "prize": "",
-      "image": "/images/cricket.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Football",
-      "description": "The football fever is here! SoChem’s Football Tournament is all about teamwork, strategy, and adrenaline-fueled action. Lace up your shoes, form your dream team, and compete for glory. Every pass, every goal, and every moment on the field brings you closer to victory.",
-      "prize": "$750",
-      "image": "/images/football.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Basketball",
-      "description": "The basketball madness is here! SoChem’s Basketball Tournament is all about skill, speed, and high-energy competition. Grab your jerseys, assemble your dream squad, and hit the court for an electrifying showdown. Every dribble, every dunk, and every clutch shot takes you one step closer to victory!",
-      "prize": "$600",
-      "image": "https://via.placeholder.com/300",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Badminton",
-      "description": "Agility meets precision in SoChem’s Badminton Tournament! Step onto the court, rally with skill, and unleash powerful smashes to claim the crown. Whether you're aiming for a perfect drop shot or a game-winning smash, every point brings you closer to glory.",
-      "prize": "$300",
-      "image": "/images/badminton.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Valosmoze",
-      "description": "Gear up for an intense Valorant showdown in SoChem’s Valosmoze tournament! Precision, strategy, and teamwork will determine who dominates the battlefield. Assemble your squad, execute flawless plays, and climb to the top as the ultimate champions. Do you have what it takes to clutch the game?",
-      "prize": "$1000",
-      "image": "/images/valosmoze.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Chess",
-      "description": "Get set to unlock your inner grandmaster! As Team Osmoze'25 brings you the Chess Tournament, where strategy meets intellect. Minds will collide, kings will fall, and the brightest minds will battle it out on the chessboard. An opportunity to showcase your skills, compete with fellow chess enthusiasts, and claim your victory!",
-      "prize": "$800",
-      "image": "/images/chess.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "ChemCoding",
-      "description": "Get ready to put your programming skills to the test in SoChem’s Chem Coding competition! Solve coding challenges, showcase your logical thinking, and outsmart the competition. Whether you're a seasoned coder or a curious beginner, this is your chance to blend technology with chemical concepts. Are you up for the challenge? s",
-      "prize": "$1200",
-      "image": "/images/chemcoding.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Udyog",
-      "description": "Greetings from Team Osmoze'25! Presenting Udyog, a Chemical Core Case Competition in collaboration with SoChem. Dive into real-world challenges, test your knowledge, and unleash your problem-solving skills.This is your chance to apply chemical engineering concepts in a competitive environment and stand a chance to win exciting prizes ",
-      "prize": "$1500",
-      "image": "/images/udyog.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Adhyayan",
-      "description": "Greetings from Team Osmoze'25! Embrace the challenge with Adhyayan'25, a Business Case Study Competition in collaboration with SoChem. Where your analytical expertise meets real-world problem-solving! ate your strategic thinking, solve business challenges, and showcase your entrepreneurial mindset. ",
-      "prize": "$2000",
-      "image": "/images/adhyayan.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    },
-    {
-      "title": "Chemathon",
-      "description": "Step into the corporate world with Chemathon, the Resume Interview Competition, where you get the chance to refine your resume and sharpen your interview skills. Showcase your professional strengths, gain real-time feedback, and get one step closer to career excellence.",
-      "prize": "$2000",
-      "image": "/images/chemathon.jpg",
-      "coordinators": [
-        { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-      ]
-    }
-  ]
-  
+  {
+    "title": "Cricket",
+    "description": "Cricket isn’t just a game—it’s a battle of skill, strategy, and endurance! SoChem’s Cricket Tournament is set to witness powerful strokes, fiery deliveries, and unforgettable moments on the pitch. Gather your squad, aim for the trophy, and play with passion.",
+    "prize": "",
+    "image": "/images/cricket.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Football",
+    "description": "The football fever is here! SoChem’s Football Tournament is all about teamwork, strategy, and adrenaline-fueled action. Lace up your shoes, form your dream team, and compete for glory. Every pass, every goal, and every moment on the field brings you closer to victory.",
+    "prize": "$750",
+    "image": "/images/football.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Basketball",
+    "description": "The basketball madness is here! SoChem’s Basketball Tournament is all about skill, speed, and high-energy competition. Grab your jerseys, assemble your dream squad, and hit the court for an electrifying showdown. Every dribble, every dunk, and every clutch shot takes you one step closer to victory!",
+    "prize": "$600",
+    "image": "https://via.placeholder.com/300",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Badminton",
+    "description": "Agility meets precision in SoChem’s Badminton Tournament! Step onto the court, rally with skill, and unleash powerful smashes to claim the crown. Whether you're aiming for a perfect drop shot or a game-winning smash, every point brings you closer to glory.",
+    "prize": "$300",
+    "image": "/images/badminton.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+  {
+    "title": "Valosmoze",
+    "description": "Gear up for an intense Valorant showdown in SoChem’s Valosmoze tournament! Precision, strategy, and teamwork will determine who dominates the battlefield. Assemble your squad, execute flawless plays, and climb to the top as the ultimate champions. Do you have what it takes to clutch the game?",
+    "prize": "$1000",
+    "image": "/images/valosmoze.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Chess",
+    "description": "Get set to unlock your inner grandmaster! As Team Osmoze'25 brings you the Chess Tournament, where strategy meets intellect. Minds will collide, kings will fall, and the brightest minds will battle it out on the chessboard. An opportunity to showcase your skills, compete with fellow chess enthusiasts, and claim your victory!",
+    "prize": "$800",
+    "image": "/images/chess.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "ChemCoding",
+    "description": "Get ready to put your programming skills to the test in SoChem’s Chem Coding competition! Solve coding challenges, showcase your logical thinking, and outsmart the competition. Whether you're a seasoned coder or a curious beginner, this is your chance to blend technology with chemical concepts. Are you up for the challenge? s",
+    "prize": "$1200",
+    "image": "/images/chemcoding.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Udyog",
+    "description": "Greetings from Team Osmoze'25! Presenting Udyog, a Chemical Core Case Competition in collaboration with SoChem. Dive into real-world challenges, test your knowledge, and unleash your problem-solving skills.This is your chance to apply chemical engineering concepts in a competitive environment and stand a chance to win exciting prizes ",
+    "prize": "$1500",
+    "image": "/images/udyog.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Adhyayan",
+    "description": "Greetings from Team Osmoze'25! Embrace the challenge with Adhyayan'25, a Business Case Study Competition in collaboration with SoChem. Where your analytical expertise meets real-world problem-solving! ate your strategic thinking, solve business challenges, and showcase your entrepreneurial mindset. ",
+    "prize": "$2000",
+    "image": "/images/adhyayan.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  },
+  {
+    "title": "Chemathon",
+    "description": "Step into the corporate world with Chemathon, the Resume Interview Competition, where you get the chance to refine your resume and sharpen your interview skills. Showcase your professional strengths, gain real-time feedback, and get one step closer to career excellence.",
+    "prize": "$2000",
+    "image": "/images/chemathon.jpg",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": false
+  }
+]
