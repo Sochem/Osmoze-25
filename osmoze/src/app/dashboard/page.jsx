@@ -46,10 +46,10 @@ export default function dashboard() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: false,
+    adaptiveHeight: true,
     arrows: true,
-    centerMode: true,
-    centerPadding: '40px'
+    centerMode: false,
+    className: 'center',
   };
 
   // const events = [
@@ -305,9 +305,9 @@ export default function dashboard() {
       {event.map((eve, index) => {
         const eventImage = getEventImage(eve);
         return (
-          <div key={index} className="px-2">
+          <div key={index} className="p-2">
             <div
-              className={`h-[400px] border-2 
+              className={`aspect-square relative border-2 
               border-yellow-300 bg-[#180F40]
               rounded-lg overflow-hidden`}
             >
@@ -317,9 +317,9 @@ export default function dashboard() {
                     src={eventImage}
                     alt={eve}
                     fill
-                    sizes="(max-width: 768px) 100vw"
+                    sizes="100vw"
                     priority
-                    className="object-cover hover:scale-110 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500"
                   />
                 </div>
               ) : (
