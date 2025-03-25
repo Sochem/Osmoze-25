@@ -29,7 +29,7 @@ const BookAnimation = () => {
       <div className="relative flex justify-center items-center">
         {/* Book Image */}
         <motion.img
-          src="https://s3-alpha-sig.figma.com/img/ef04/303f/4cc1eaedba89b71ba82c7295e60a8bc6?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=t-8vnJvX88WfTDR9AusNn2se1EMjdz9pBlG8JtMRDSoBO4HRrDqR26-KVnpGYziTovj6Sa-AlT5w0CQyq5K9MIDOLl-5z4I6UDDirx4J~Aw1KOSrmN5SOG43h-y6one8GYspis6EdBAB3Vppwsokk12Qs-s7yW65ZyUCgSktL5n4S24UHjDxPpb2tGYyWq8JR9zVHh-dhhnsMv-kxExh7e4Br59q9dzyI6M6DsxC7jXRUb7WcGK2r-fmolZdYUmJjURB8G-PvGCDma3Cld6xMyvzfKW-fypAjoTc0~cr40VOsqZaP~1XFh2NQyiASKI~Clj0-jLMJDPutcoqvvLgEw__"
+          src="/images/book.png"
           alt="Book"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
