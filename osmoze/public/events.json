@@ -70,16 +70,6 @@
     "launch": false
   },
   {
-    "title": "Adhyayan",
-    "description": "Greetings from Team Osmoze'25! Embrace the challenge with Adhyayan'25, a Business Case Study Competition in collaboration with SoChem. Where your analytical expertise meets real-world problem-solving! ate your strategic thinking, solve business challenges, and showcase your entrepreneurial mindset. ",
-    "prize": "$2000",
-    "image": "/images/adhyayan.jpg",
-    "coordinators": [
-      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-    ],
-    "launch": false
-  },
-  {
     "title": "Chemathon",
     "description": "Step into the corporate world with Chemathon, the Resume Interview Competition, where you get the chance to refine your resume and sharpen your interview skills. Showcase your professional strengths, gain real-time feedback, and get one step closer to career excellence.",
     "prize": "$2000",

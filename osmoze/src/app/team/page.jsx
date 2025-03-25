@@ -100,7 +100,7 @@ function Team() {
           title="Operation Heads"
           members={[
             { name: "Ansh Bhargava", image: "/images/Ansh Bhargava.jpg" },
-            { name: "Rajat Kumar", image: "/images/Rajat Kumar.jpg" },
+            { name: "Rajat Kumar", image: "/images/rajat.jpg" },
           ]}
         />
         <TeamSection
