@@ -118,9 +118,7 @@ export default function EventsPage() {
                   disabled={!selectedEvent.launch}
                 >
                   {selectedEvent.launch ? (
-                    <a href="https://forms.gle/uSvdiht2bcyViaYa8">
-                      Register Now
-                    </a>
+                    <a href={selectedEvent.form}>Register Now </a>
                   ) : (
                     "Coming Soon..."
                   )}
