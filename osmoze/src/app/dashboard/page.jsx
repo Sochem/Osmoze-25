@@ -14,6 +14,7 @@ import { FaSun } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import eventsData from '../../../public/events.json';
 
 export default function dashboard() {
   const [lightTheme, setLightTheme] = useState(false);
@@ -36,14 +37,19 @@ export default function dashboard() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    adaptiveHeight: true
   };
 
   const settings_sm = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: false,
+    arrows: true,
+    centerMode: true,
+    centerPadding: '40px'
   };
 
   // const events = [
@@ -91,6 +97,13 @@ export default function dashboard() {
 
     fetchUserData();
   }, []);
+
+  const getEventImage = (eventName) => {
+    const event = eventsData.find(
+      (e) => e.title.toLowerCase() === eventName.toLowerCase()
+    );
+    return event ? event.image : null;
+  };
 
   if (!user) return null;
 
@@ -250,44 +263,85 @@ export default function dashboard() {
           <div className="w-full max-w-4xl mx-auto my-5 max-lg:hidden">
             {event && event.length > 0 ? (
               <Slider {...settings}>
-                {event.map((eve, index) => (
-                  <div
-                    key={index}
-                    className={`lg:h-[125px] border-[5px] max-lg:w-25 max-lg:h-20
-          border-black ${lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"}  
-          flex text-center align-middle my-auto justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
-                  >
-                    {eve}
-                  </div>
-                ))}
+                {event.map((eve, index) => {
+                  const eventImage = getEventImage(eve);
+                  return (
+                    <div key={index} className="px-2">
+                      <div
+                        className={`h-[250px] border-[2px] ${lightTheme ? "bg-[#3D6CBB] border-black" : "bg-gray-200 border-white"}  
+                flex items-center justify-center 
+                rounded-[20px] overflow-hidden`}
+                      >
+                        {eventImage ? (
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={eventImage}
+                              alt={eve}
+                              fill
+                              className="object-cover transition-transform duration-300"
+                            />
+                          </div>
+                        ) : (
+                          <div className={`text-2xl font-bold ${lightTheme ? "text-white" : "text-[#0F1035]"
+                            }`}>
+                            {eve}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </Slider>
             ) : (
-              <div className="text-white text-center md:text-2xl text-xl font-bold bg-[#180F40] ">
+              <div className="text-white text-center md:text-2xl text-xl font-bold bg-[#180F40] p-4 rounded-lg">
                 Not Registered For Any Events Yet
               </div>
             )}
           </div>
 
-          {/* <div className="w-full max-w-4xl mx-auto my-10 lg:hidden">
+          <div className="w-full max-w-4xl mx-auto my-5 lg:hidden px-4">
   {event && event.length > 0 ? (
     <Slider {...settings_sm}>
-      {event.map((eve, index) => (
-        <div
-          key={index}
-          className={`border-[5px] max-lg:w-10 max-lg:h-[8rem]
-          border-black ${lightTheme ? "bg-[#3D6CBB] text-white" : "bg-gray-200"}  
-          flex text-center align-middle justify-center rounded-[30px] text-3xl text-[#0F1035] font-bold`}
-        >
-          {eve}
-        </div>
-      ))}
+      {event.map((eve, index) => {
+        const eventImage = getEventImage(eve);
+        return (
+          <div key={index} className="px-2">
+            <div
+              className={`h-[400px] border-2 
+              border-yellow-300 bg-[#180F40]
+              rounded-lg overflow-hidden`}
+            >
+              {eventImage ? (
+                <div className="relative w-full h-full">
+                  <Image
+                    src={eventImage}
+                    alt={eve}
+                    fill
+                    sizes="(max-width: 768px) 100vw"
+                    priority
+                    className="object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className={`text-2xl font-bold ${
+                    lightTheme ? "text-white" : "text-[#0F1035]"
+                  }`}>
+                    {eve}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
     </Slider>
   ) : (
-    <div className="text-white text-center text-xl">
+    <div className="text-white text-center text-xl font-bold bg-[#180F40] p-4 rounded-lg">
       Not Registered For Any Events Yet
     </div>
   )}
-</div> */}
+</div>
 
           {/* <hr className={`${lightTheme? "border-black" : "border-white"} w-full border my-4`}></hr> */}
           <div className="flex justify-between">
