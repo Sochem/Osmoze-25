@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      },
+      {
+        "src": "/old-route",
+        "status": 301,
+        "headers": { "Location": "/new-route" }
+      },
+      {
+        "src": "/custom-page",
+        "dest": "/custom-page.html"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/blog/:slug",
+        "destination": "/blog-post?slug=:slug"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/old-page",
+        "destination": "/new-page",
+        "permanent": true
+      }
+    ],
+    "headers": [
+      {
+        "source": "/api/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" }
+        ]
+      }
+    ]
+  }
