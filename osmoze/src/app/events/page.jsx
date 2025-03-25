@@ -26,7 +26,7 @@ export default function EventsPage() {
       {/* Page Header */}
       <section className="text-center py-10">
         <h1 className="text-4xl md:text-5xl font-modern font-bold text-[#6bb4e8] drop-shadow-[3px_3px_0px_rgba(0,0,0,0.7)]">
-          EVENTS
+          UPCOMING EVENTS
         </h1>
         <p className="mt-2 text-lg max-w-2xl mx-auto px-4">
           Explore our amazing events and competitions.

@@ -7,7 +7,7 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": true
+    "launch": false
   },
   {
     "title": "Football",
@@ -17,33 +17,23 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": true
+    "launch": false
   },
   {
     "title": "Basketball",
     "description": "The basketball madness is here! SoChem’s Basketball Tournament is all about skill, speed, and high-energy competition. Grab your jerseys, assemble your dream squad, and hit the court for an electrifying showdown. Every dribble, every dunk, and every clutch shot takes you one step closer to victory!",
     "prize": "$600",
-    "image": "https://via.placeholder.com/300",
+    "image": "/images/basketball.jpg",
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": true
+    "launch": false
   },
   {
     "title": "Badminton",
     "description": "Agility meets precision in SoChem’s Badminton Tournament! Step onto the court, rally with skill, and unleash powerful smashes to claim the crown. Whether you're aiming for a perfect drop shot or a game-winning smash, every point brings you closer to glory.",
     "prize": "$300",
     "image": "/images/badminton.jpg",
-    "coordinators": [
-      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
-    ],
-    "launch": true
-  },
-  {
-    "title": "Valosmoze",
-    "description": "Gear up for an intense Valorant showdown in SoChem’s Valosmoze tournament! Precision, strategy, and teamwork will determine who dominates the battlefield. Assemble your squad, execute flawless plays, and climb to the top as the ultimate champions. Do you have what it takes to clutch the game?",
-    "prize": "$1000",
-    "image": "/images/valosmoze.jpg",
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
