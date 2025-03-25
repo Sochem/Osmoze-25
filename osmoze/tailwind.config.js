@@ -1,7 +1,5 @@
-import { Risque } from "next/font/google";
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,10 +13,10 @@ export default {
       },
       fontFamily: {
         risque: ["var(--font-risque)", "cursive"],
-        modern: ["'Modern Antiqua'", "cursive"], // Modern Antiqua font
-        merriweather: ["'Merriweather'", "serif"], // Merriweather font
+        modern: ["'Modern Antiqua'", "cursive"], 
+        merriweather: ["'Merriweather'", "serif"],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
