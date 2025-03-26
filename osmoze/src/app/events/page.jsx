@@ -3,10 +3,13 @@ import { useState, useEffect } from "react";
 import EventCard from "../components/EventCard";
 import Image from "next/image";
 import { X } from "lucide-react"; // Close icon
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig"
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [registeredEvents, setRegisteredEvents] = useState([]);
 
   // Fetch data from events.json
   useEffect(() => {
@@ -20,6 +23,19 @@ export default function EventsPage() {
   useEffect(() => {
     document.body.style.overflow = selectedEvent ? "hidden" : "auto";
   }, [selectedEvent]);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      const user = JSON.parse(userData);
+      const userDoc = doc(db, "users", user.email);
+      getDoc(userDoc).then((doc) => {
+        if (doc.exists()) {
+          setRegisteredEvents(doc.data().events || []);
+        }
+      });
+    }
+  }, []);
 
   return (
     <div className="relative w-screen min-h-screen text-white bg-[url('/images/events_bg.png')] bg-fixed bg-top bg-contain pb-10">
@@ -35,9 +51,8 @@ export default function EventsPage() {
 
       {/* Hide event cards when modal is open */}
       <div
-        className={`transition-all duration-300 ${
-          selectedEvent ? "hidden" : "block"
-        }`}
+        className={`transition-all duration-300 ${selectedEvent ? "hidden" : "block"
+          }`}
       >
         <div className="flex flex-col items-center space-y-8 px-4 sm:px-8 md:px-16 lg:px-24">
           {events.length > 0 ? (
@@ -102,6 +117,7 @@ export default function EventsPage() {
               </p> */}
 
               {/* Buttons */}
+              {/* Buttons */}
               <div className="mt-6 flex flex-wrap justify-center sm:justify-start space-x-4">
                 <button
                   onClick={() => setSelectedEvent(null)}
@@ -109,20 +125,30 @@ export default function EventsPage() {
                 >
                   Close
                 </button>
-                <button
+                {selectedEvent.launch && (
+                  <button
                   className={`px-5 py-2 ${
-                    selectedEvent.launch
-                      ? "bg-blue-500 hover:bg-yellow-600"
-                      : "bg-gray-500 cursor-not-allowed"
+                    registeredEvents.some(event => event.toLowerCase() === selectedEvent.title.toLowerCase())
+                      ? "bg-green-600 cursor-not-allowed"
+                      : "bg-blue-500 hover:bg-yellow-600"
                   } text-white rounded-lg transition`}
-                  disabled={!selectedEvent.launch}
+                  disabled={registeredEvents.some(event => event.toLowerCase() === selectedEvent.title.toLowerCase())}
                 >
-                  {selectedEvent.launch ? (
-                    <a href={selectedEvent.form}>Register Now </a>
+                  {registeredEvents.some(event => event.toLowerCase() === selectedEvent.title.toLowerCase()) ? (
+                    "Already Registered"
                   ) : (
-                    "Coming Soon..."
+                    <a href={selectedEvent.form}>Register Now</a>
                   )}
                 </button>
+                )}
+                {!selectedEvent.launch && (
+                  <button
+                    className="px-5 py-2 bg-gray-500 cursor-not-allowed text-white rounded-lg"
+                    disabled
+                  >
+                    Coming Soon...
+                  </button>
+                )}
               </div>
             </div>
           </div>
