@@ -86,7 +86,7 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": false
+    "launch": true
   },
   {
     "title": "Adhyayan",
