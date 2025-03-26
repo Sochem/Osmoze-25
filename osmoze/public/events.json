@@ -1,5 +1,17 @@
 [
   {
+    "title": "Valosmoze",
+    "description": "Gear up for an intense Valorant showdown in SoChem’s Valosmoze tournament! Precision, strategy, and teamwork will determine who dominates the battlefield. Assemble your squad, execute flawless plays, and climb to the top as the ultimate champions. Do you have what it takes to clutch the game?",
+    "prize": "$1000",
+    "image": "/images/valosmoze.jpg",
+    "form": "https://docs.google.com/forms/d/e/1FAIpQLSdGzkzXacXlpIAbZ8YXxzNbRXH34fwZFpb-ubp145h71_4Xvw/viewform",
+    "coordinators": [
+      { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
+    ],
+    "launch": true
+  },
+
+  {
     "title": "Cricket",
     "description": "Cricket isn’t just a game—it’s a battle of skill, strategy, and endurance! SoChem’s Cricket Tournament is set to witness powerful strokes, fiery deliveries, and unforgettable moments on the pitch. Gather your squad, aim for the trophy, and play with passion.",
     "prize": "",
@@ -69,6 +81,7 @@
     "title": "Udyog",
     "description": "Greetings from Team Osmoze'25! Presenting Udyog, a Chemical Core Case Competition in collaboration with SoChem. Dive into real-world challenges, test your knowledge, and unleash your problem-solving skills.This is your chance to apply chemical engineering concepts in a competitive environment and stand a chance to win exciting prizes ",
     "prize": "$1500",
+    "form": "https://docs.google.com/forms/d/e/1FAIpQLSd_fTV0PV61mH9WKecu6uuK7aIxNKv5fODhCSeuq31G8G_z_w/viewform",
     "image": "/images/udyog.jpg",
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
