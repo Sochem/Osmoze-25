@@ -145,7 +145,7 @@ export default function dashboard() {
             </li>
 
             <li className="hover:text-white cursor-pointer">
-              <a href="/aboutUs">Contact Us</a>
+              <a href="/aboutus">Contact Us</a>
             </li>
           </ul>
           <Image
