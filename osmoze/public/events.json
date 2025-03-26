@@ -42,7 +42,7 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": true
+    "launch": false
   },
   {
     "title": "Chess",
@@ -53,7 +53,7 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": true
+    "launch": false
   },
   {
     "title": "ChemCoding",
