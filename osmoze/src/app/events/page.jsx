@@ -134,22 +134,34 @@ export default function EventsPage() {
                 <div className="mt-6 flex flex-wrap justify-center sm:justify-start space-x-4">
                   <button
                     onClick={() => setSelectedEvent(null)}
-                    className="px-5 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+                    className="px-5 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition"
                   >
                     Close
                   </button>
                   {selectedEvent.launch && (
                     <button
-                      className={`px-5 py-2 ${registeredEvents.some(event => event.toLowerCase() === selectedEvent.title.toLowerCase())
+                      className={`px-5 py-2 ${registeredEvents.some(
+                        (event) => event.toLowerCase() === selectedEvent.title.toLowerCase()
+                      )
                           ? "bg-green-600 cursor-not-allowed"
-                          : "bg-blue-500 hover:bg-yellow-600"
+                          : !selectedEvent.active
+                            ? "bg-red-600 cursor-not-allowed"
+                            : "bg-blue-500 hover:bg-yellow-600"
                         } text-white rounded-lg transition`}
-                      disabled={registeredEvents.some(event => event.toLowerCase() === selectedEvent.title.toLowerCase())}
+                      disabled={
+                        registeredEvents.some(
+                          (event) => event.toLowerCase() === selectedEvent.title.toLowerCase()
+                        ) || !selectedEvent.active
+                      }
                       onClick={handleRegistration}
                     >
-                      {registeredEvents.some(event => event.toLowerCase() === selectedEvent.title.toLowerCase())
+                      {registeredEvents.some(
+                        (event) => event.toLowerCase() === selectedEvent.title.toLowerCase()
+                      )
                         ? "Already Registered"
-                        : "Register Now"}
+                        : !selectedEvent.active
+                          ? "Registration Closed"
+                          : "Register Now"}
                     </button>
                   )}
                   {!selectedEvent.launch && (
