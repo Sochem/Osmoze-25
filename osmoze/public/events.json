@@ -45,7 +45,7 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": false,
+    "launch": true,
     "active": true
   },
   {
@@ -54,7 +54,6 @@
     "prize": "$300",
     "image": "/images/badminton.jpg",
     "form": "https://forms.gle/vrpffQxWhhKGzh597",
-    "form": "https://forms.gle/STS4JKjBMcpejA2aA",
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
