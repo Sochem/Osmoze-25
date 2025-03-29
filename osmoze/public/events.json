@@ -9,7 +9,7 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": true,
-    "active": true
+    "active": false
   },
 
   {
@@ -58,7 +58,7 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": true,
-    "active": true
+    "active": false
   },
   {
     "title": "Chess",
@@ -106,7 +106,7 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": true,
-    "active": true
+    "active": false
   },
   {
     "title": "Chemathon",
