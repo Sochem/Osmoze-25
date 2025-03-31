@@ -189,7 +189,7 @@ export default function dashboard() {
                       <li className="hover:text-white cursor-pointer"><a href="/events">Event Registration</a></li>
                       <li className="hover:text-white cursor-pointer"><a href="https://www.instagram.com/sochem_iitbhu/">
                         Announcements</a></li>
-                      <li className="hover:text-white cursor-pointer"><a href="/aboutUs">Contact Us</a></li>
+                      <li className="hover:text-white cursor-pointer"><a href="/aboutus">Contact Us</a></li>
 
                     </ul>
 
