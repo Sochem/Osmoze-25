@@ -22,7 +22,7 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": false,
-    "active": true
+    "active": false
   },
   {
     "title": "Football",
@@ -34,7 +34,7 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": true,
-    "active": true
+    "active": false
   },
   {
     "title": "Basketball",
@@ -70,7 +70,7 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": false,
-    "active": true
+    "active": false
   },
   {
     "title": "ChemCoding",
@@ -94,7 +94,7 @@
     ],
 
     "launch": true,
-    "active": true
+    "active": false
   },
   {
     "title": "Adhyayan",
