@@ -80,8 +80,8 @@
     "coordinators": [
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
-    "launch": false,
-    "active": true
+    "launch": true,
+    "active": false
   },
   {
     "title": "Udyog",
@@ -118,6 +118,6 @@
       { "name": "Bhartendu Bhardwaj", "contact": "+91-8303621812" }
     ],
     "launch": true,
-    "active": true
+    "active": false
   }
 ]
